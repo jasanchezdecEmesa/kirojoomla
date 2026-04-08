@@ -1,0 +1,51 @@
+#sp-header {
+    background-color: #171717;
+}
+#sp-main-body {
+    background: #F0F0F0;
+}
+#sp-main-body {
+    margin-top: 0px;
+}
+#sp-header .container {
+    max-width: 100%;
+}
+#sp-menu {
+    padding-right: 50px;
+}
+#sp-left ul.menu-child {
+    padding-left: 5px;
+}
+#sp-left {
+    background-color: #171717;
+}
+#sp-left .menu-separator {
+    padding-top: 25px;
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #eee;
+    border-bottom: 1px solid #eee;
+}
+#sp-main-body {
+    padding: 0;
+}
+#sp-left .sp-module {
+    border: none;
+    padding: 20px;
+}
+#sp-left .sp-module ul > li {
+    border-bottom: none;
+}
+#sp-left  .sp-module ul > li > a {
+    color: #ccc;
+}
+#sp-left  .sp-module ul > li > a:hover {
+    color: #fff;
+}
+#sp-footer .container-inner {
+    border-top: none;
+}
+.reservaskiro {
+    padding-top: 0px;
+}

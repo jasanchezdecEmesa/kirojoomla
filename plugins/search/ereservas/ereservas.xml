@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.1" type="plugin" group="search">
+    <name>plg_search_ereservas</name>
+    <author>Equipos Mecanizados,S.L.</author>
+    <creationDate>2019-09-04</creationDate>
+    <copyright>2019 Equipos Mecanizados,S.L.</copyright>
+    <license>Licencia Pública General GNU versión 2 o posterior. Consulte LICENSE.txt</license>
+    <authorEmail>rsainz@emesa.com</authorEmail>
+    <authorUrl>http://www.emesa.com</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>PLG_SEARCH_COM_ERESERVAS_XML_DESCRIPTION</description>
+    <files>
+        <filename plugin="ereservas">ereservas.php</filename>
+        <filename>index.html</filename>
+    </files>
+    <languages folder="languages">
+        
+			<language tag="en-GB">en-GB/en-GB.plg_search_ereservas.ini</language>
+			<language tag="en-GB">en-GB/en-GB.plg_search_ereservas.sys.ini</language>
+			<language tag="es-ES">es-ES/es-ES.plg_search_ereservas.ini</language>
+			<language tag="es-ES">es-ES/es-ES.plg_search_ereservas.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+
+            <fieldset name="basic">
+                <field name="search_limit" type="text" default="50" size="5"
+                       description="PLG_SEARCH_COM_ERESERVAS_FIELD_SEARCHLIMIT_DESC"
+                       label="PLG_SEARCH_COM_ERESERVAS_FIELD_SEARCHLIMIT_LABEL" />
+            </fieldset>
+
+        </fields>
+    </config>
+</extension>

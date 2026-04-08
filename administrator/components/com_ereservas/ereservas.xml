@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_ereservas</name>
+    <creationDate>2019-09-04</creationDate>
+    <copyright>2019 Equipos Mecanizados,S.L.</copyright>
+    <license>Licencia Pública General GNU versión 2 o posterior. Consulte LICENSE.txt</license>
+    <author>Equipos Mecanizados,S.L.</author>
+    <authorEmail>rsainz@emesa.com</authorEmail>
+    <authorUrl>http://www.emesa.com</authorUrl>
+    <version>CVS: 1.0.0</version>
+    <description>COM_ERESERVAS_XML_DESCRIPTION</description>
+    
+    <scriptfile>script.php</scriptfile>
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <update> <!-- Runs on update -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/update.mysql.utf8.sql</file>
+        </sql>
+    </update>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>ereservas.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+    </files>
+    <media destination="com_ereservas" folder="media">
+        <folder>js</folder>
+        <folder>css</folder>
+    </media>
+    <languages folder="site/languages">
+        
+			<language tag="en-GB">en-GB/en-GB.com_ereservas.ini</language>
+			<language tag="es-ES">es-ES/es-ES.com_ereservas.ini</language>
+    </languages>
+    <administration>
+        <menu>COM_ERESERVAS</menu>
+        <submenu>
+            
+			<menu link="option=com_ereservas&amp;view=visitas" view="visitas" alt="Ereservas/Visitas">COM_ERESERVAS_TITLE_VISITAS</menu>
+
+			<menu link="option=com_ereservas&amp;view=tipovisitas" view="tipovisitas" alt="Ereservas/Tipovisitas">COM_ERESERVAS_TITLE_TIPOVISITAS</menu>
+
+			<menu link="option=com_ereservas&amp;view=salas" view="salas" alt="Ereservas/Salas">COM_ERESERVAS_TITLE_SALAS</menu>
+
+			<menu link="option=com_ereservas&amp;view=idiomas" view="idiomas" alt="Ereservas/Idiomas">COM_ERESERVAS_TITLE_IDIOMAS</menu>
+
+			<menu link="option=com_ereservas&amp;view=paiss" view="paiss" alt="Ereservas/Paiss">COM_ERESERVAS_TITLE_PAISS</menu>
+
+			<menu link="option=com_ereservas&amp;view=tipoclientes" view="tipoclientes" alt="Ereservas/Tipoclientes">COM_ERESERVAS_TITLE_TIPOCLIENTES</menu>
+
+			<menu link="option=com_ereservas&amp;view=reservas" view="reservas" alt="Ereservas/Reservas">COM_ERESERVAS_TITLE_RESERVAS</menu>
+
+			<menu link="option=com_ereservas&amp;view=guias" view="guias" alt="Ereservas/Guias">COM_ERESERVAS_TITLE_GUIAS</menu>
+
+			<menu link="option=com_ereservas&amp;view=calendarios" view="calendarios" alt="Ereservas/Calendarios">COM_ERESERVAS_TITLE_CALENDARIOS</menu>
+
+			<menu link="option=com_ereservas&amp;view=facturas" view="facturas" alt="Ereservas/Facturas">COM_ERESERVAS_TITLE_FACTURAS</menu>
+
+			<menu link="option=com_ereservas&amp;view=serviciosemanales" view="serviciosemanales" alt="Ereservas/Serviciosemanales">COM_ERESERVAS_TITLE_SERVICIOSEMANALES</menu>
+
+			<menu link="option=com_ereservas&amp;view=fechasaperturas" view="fechasaperturas" alt="Ereservas/Fechasaperturas">COM_ERESERVAS_TITLE_FECHASAPERTURAS</menu>
+
+			<menu link="option=com_ereservas&amp;view=cierres" view="cierres" alt="Ereservas/Cierres">COM_ERESERVAS_TITLE_CIERRES</menu>
+
+			<menu link="option=com_ereservas&amp;view=cancelaciones" view="cancelaciones" alt="Ereservas/Cancelaciones">COM_ERESERVAS_TITLE_CANCELACIONES</menu>
+
+			<menu link="option=com_ereservas&amp;view=listaesperas" view="listaesperas" alt="Ereservas/Listaesperas">COM_ERESERVAS_TITLE_LISTAESPERAS</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>ereservas.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="administrator/languages">
+            
+			<language tag="en-GB">en-GB/en-GB.com_ereservas.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_ereservas.sys.ini</language>
+			<language tag="es-ES">es-ES/es-ES.com_ereservas.ini</language>
+			<language tag="es-ES">es-ES/es-ES.com_ereservas.sys.ini</language>
+        </languages>
+    </administration>
+    <config>
+        <fields name="params">
+            <fieldset name="component">
+                <field name="save_history" default="0" />
+            </fieldset>
+        </fields>
+    </config>
+    <plugins>
+        <plugin group="search" plugin="ereservas"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->

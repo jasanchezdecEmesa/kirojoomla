@@ -1,0 +1,1273 @@
+#jform_cata_chzn .chzn-single span,
+#jform_comida_chzn .chzn-single span {
+    text-transform: capitalize;
+}
+
+#sp-header {
+    background-color: #272228;
+}
+
+#sp-main-body {
+    padding: 25px 0;
+    min-height: 800px;
+}
+
+.coming-soon h1 {
+    color: #fff;
+}
+
+.coming-soon .coming-soon-content {
+    color: #fff;
+    font-size: 18px;
+}
+
+
+/************************************
+Ajustes para que se parezca a KIRO
+*************************************/
+
+
+/*************************************
+Menu Kiro
+*************************************/
+
+#sp-header.header-sticky {
+    height: 60px;
+}
+
+#sp-menu .lang-inline {
+    margin-top: 0;
+}
+
+#sp-menu .lang-inline>li>a>img {
+    padding: 0 20px;
+}
+#sp-header #sp-user2 .sp-column{
+    display: block !important;
+}
+
+#sp-user3 .sp-module ul,
+#sp-menu .sp-megamenu-wrapper ul {
+    display: inline-block;
+    vertical-align: middle;
+}
+#sp-header.header-sticky #sp-user3 .menu{
+    margin-bottom: 0;
+}
+
+#sp-user3 .sp-module ul {
+    float: left;
+}
+
+#sp-menu .sp-megamenu-wrapper ul {
+    float: right;
+}
+
+#sp-user3 .sp-module ul>li,
+#sp-menu .sp-megamenu-wrapper ul>li {
+    display: inline-block;
+    float: left;
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#sp-user3 .sp-module ul>li>a,
+#sp-menu .sp-megamenu-wrapper ul>li>a {
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0px;
+    line-height: 120px;
+    padding: 0 20px;
+}
+
+#sp-user2 {
+    padding: 0px;
+}
+
+#sp-user2 img {
+    margin: 0 auto;
+}
+
+#sp-title {
+    min-height: 0;
+    margin-top: -80px;
+    display: block;
+    width: 100%;
+    height: 700px;
+    text-align: left;
+    position: relative;
+    background-color: #5d5d5d;
+}
+
+#sp-section-2 #sp-title .container {
+    background-color: rgba(255, 255, 255, 0.85);
+}
+
+#sp-section-2 #sp-title .container h2 {
+    padding: 27px 57px 19px;
+    color: #252525;
+    font-family: 'Raleway', sans-serif;
+    font-size: 64px;
+    margin-top: 300px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+#sp-header {
+    background: transparent;
+    box-shadow: none;
+}
+
+.com-sppagebuilder #sp-title {
+    display: none;
+}
+
+
+/****************************************************
+        Sticky header
+******************************************************/
+
+#sp-header.header-sticky {
+    background: transparent;
+}
+
+#sp-header.header-sticky .sp-module ul>li>a,
+#sp-header.header-sticky .sp-megamenu-wrapper ul>li>a {
+    color: #252525;
+    font-family: 'Raleway', sans-serif !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 55px;
+    letter-spacing: 0px;
+}
+
+#sp-header.header-sticky .sp-module ul>li>a:hover,
+#sp-header.header-sticky .sp-module ul li.current a,
+#sp-header.header-sticky .sp-megamenu-wrapper ul li.current a,
+#sp-header.header-sticky .sp-megamenu-wrapper ul>li>a:hover{
+    color: #e6ae48;
+}
+
+#sp-header.header-sticky ul.menu {
+    padding-inline-start: 0px;
+}
+
+#sp-header.header-sticky .col-lg-5 {
+    padding-right: 0px;
+    padding-left: 0px;
+}
+
+#sp-header.header-sticky #sp-user2 {
+    display: none;
+}
+
+#sp-header.header-sticky #sp-menu .lang-inline {
+    margin-top: 0px;
+}
+
+#sp-main-body {
+    margin-top: -80px;
+}
+
+.foto-inicio .sppb-addon-single-image-container,
+.foto-inicio img {
+    width: 100%;
+}
+
+.header-sticky #sp-menu {
+    max-width: 50%;
+    flex: 0 0 50%;
+}
+.sp-megamenu-wrapper,
+#sp-menu .sp-megamenu-wrapper ul{
+    display:inline-block !important;
+    float:right;
+}
+.mod-languages{
+    display: inline;
+    float: left;
+}
+
+/*************************************************
+        Ajustes de estilo 
+*************************************************/
+
+.caja-texto h2.sppb-addon-title {
+    font-size: 14px;
+    line-height: 22px;
+    font-style: italic;
+    letter-spacing: 2px;
+    font-weight: 300;
+    color: #000000;
+    text-transform: none;
+}
+
+.intro-caja-texto h5 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    line-height: 33px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: 0px;
+    text-transform: uppercase !important;
+}
+
+.page-5 .intro-caja-texto h5,
+.page-6 .intro-caja-texto h5,
+.page-7 .intro-caja-texto h5,
+.page-9 .intro-caja-texto h5,
+.page-10 .intro-caja-texto h5,
+.page-11 .intro-caja-texto h5,
+.page-12 .intro-caja-texto h5,
+.page-13 .intro-caja-texto h5,
+.page-14 .intro-caja-texto h5,
+.page-15 .intro-caja-texto h5 {
+    letter-spacing: 4px;
+}
+
+.caja-texto p {
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    line-height: 22px;
+    font-style: normal;
+    font-weight: 300;
+    letter-spacing: 0px;
+    text-transform: none;
+}
+
+
+/***********************************
+        Ajustes a las galerias 
+***********************************/
+
+.galeria-paginas li {
+    width: 25%;
+}
+
+.galeria-paginas a {
+    max-width: 100%;
+}
+
+#section-id-1564988376565.galeria-paginas #sppb-addon-wrapper-1564989724377 img {
+    width: 100%;
+    height: auto;
+}
+
+.reservas-solo-online p {
+    font-family: Raleway;
+    font-size: 26px;
+    line-height: 37px;
+    font-style: normal;
+    font-weight: 600;
+    color: #ffffff;
+    text-decoration: none;
+    letter-spacing: 0px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.reservas-solo-online .solo-online {
+    color: #e6ae48;
+}
+
+.itemid-286 #section-id-1564988376565.galeria-paginas #sppb-addon-wrapper-1564989724377 img {
+    height: auto;
+    
+}
+
+
+/******************************
+Redes contacto
+******************************/
+
+.redes-contacto ul {
+    margin: 0 auto !important;
+}
+
+
+/***********************************
+            Footer Kiro
+************************************/
+
+#sp-bottom.primer-bottom {
+    padding-top: 115px;
+    padding-bottom: 30px;
+}
+
+#sp-bottom .donde-bottom h3.sp-module-title,
+#sp-bottom .contacto-bottom h3.sp-module-title,
+#sp-bottom .horarios-bottom h3.sp-module-title {
+    font-family: Poppins, sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    letter-spacing: 0px;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-align: center;
+}
+
+#sp-bottom .donde-bottom .sp-module-content,
+#sp-bottom .contacto-bottom .sp-module-content,
+#sp-bottom .horarios-bottom .sp-module-content,
+.seccionlegal a {
+    font-family: Raleway, sans-serif;
+    font-size: 14px;
+    line-height: 29px;
+    letter-spacing: 0px;
+    font-weight: 400;
+    font-style: normal;
+    text-transform: none;
+    color: #9e9e9e;
+}
+
+#sp-bottom4 .tarjetas-bottom img {
+    width: 50px;
+    margin: 0px 15px 25px;
+    display: inline;
+}
+
+#sp-bottom4 .tarjetas-bottom p {
+    text-align: center;
+}
+
+#sp-bottom .sp-module ul>li {
+    display: inline-block;
+    margin: 7px;
+}
+
+#sp-bottom .sp-module ul {
+    text-align: center;
+}
+
+#sp-bottom .sp-module ul>li>a {
+    display: inline;
+    color: #9e9e9e;
+}
+
+#sp-bottom .sp-module ul>li>a:hover {
+    display: inline;
+    color: #ffffff;
+}
+
+#sp-bottom {
+    background: #252525;
+    padding: 60px 0px;
+}
+
+#sp-bottom.secciontarjetas,
+#sp-bottom.seccionlegal {
+    padding: 0px;
+}
+
+.coockie_banner {
+    z-index: 99999;
+}
+
+
+/*******************************************
+Articulos legales
+*******************************************/
+
+.article-details {
+    padding-top: 100px;
+}
+
+#sp-main-body {
+    background: white;
+}
+
+.article-details .article-header h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-style: normal;
+    line-height: 1.3125em;
+    letter-spacing: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.article-details h2 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    line-height: 22px;
+    font-weight: 700;
+    text-transform: none;
+}
+
+.article-details p,
+.article-details li {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    line-height: 29px;
+    letter-spacing: 0px;
+    font-style: normal;
+    text-transform: none;
+    color: #000000;
+    font-weight: 300;
+}
+
+
+/*******************************************
+        Pagina de lista de espera
+********************************************/
+
+.lista-form .sppb-form-builder-field-3 {
+    background-color: #e8b456c2;
+    padding: 30px 0px;
+    border-radius: 50px;
+    margin-top: 20px;
+}
+
+.lista-form .sppb-form-builder-field-3 label {
+    font-weight: 600;
+    text-decoration: underline;
+    margin-top: 14px;
+    width: 100%;
+    text-align: center;
+}
+
+.lista-form .sppb-form-builder-field-3 input {
+    margin: 0 auto;
+    width: 35%;
+}
+
+
+/******************************************
+        General formularios
+*******************************************/
+
+#texto-intro-form .sppb-column {
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+
+
+/******************************************
+Ajustes calendario reservas
+******************************************/
+
+.itemid-280 .sp-page-title,
+.itemid-291 .sp-page-title {
+    background-image: url(/kironueva/images/cabecera_arroz.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 700px;
+}
+
+.itemid-280 #sp-main-body {
+    margin-top: 0px;
+}
+
+.itemid-280 .sp-page-title .container,
+.itemid-291 .sp-page-title .container {
+    display: none;
+}
+
+.reservaskiro {
+    padding-top: 130px;
+}
+
+.reservaskiro p {
+    font-family: "Raleway", sans-serif;
+    font-size: 14px;
+    line-height: 29px;
+    letter-spacing: 0px;
+    font-weight: 500;
+    font-style: normal;
+    text-transform: none;
+    font-weight: 300;
+    color: #000000;
+}
+
+.reservaskiro .descripcion h1.precio {
+    text-decoration: underline;
+}
+
+.reservaskiro .descripcion h1 {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 24px;
+    line-height: 39px;
+    font-style: normal;
+    font-weight: 600;
+    letter-spacing: 0px;
+    text-transform: uppercase;
+}
+
+#seccion-calendario {
+    padding: 20px;
+    background: white;
+}
+
+#seccion-calendario h2::first-letter {
+    text-transform: uppercase;
+}
+
+.visitas-publicas {
+    background: white;
+    border: 1px solid #bbb;
+}
+
+button.boton-adultos {
+    color: #565656 !important;
+}
+
+#eventos .cabeceras-evento td {
+    background-color: #eee;
+    font-weight: bold;
+    border: 1px solid #bbb;
+}
+
+#seccion-calendario .cerrado_front {
+    background: repeating-linear-gradient( 45deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 5px, #e295b338 0px, #e295b338 10px);
+}
+
+
+/******************************************
+Seccion de facturacion
+/*****************************************/
+
+.itemid-0 #sp-title {
+    background-image: url("/images/cabecera_arroz.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 1280px;
+}
+
+.itemid-0 #sp-component {
+    margin-top: 100px;
+}
+
+
+/******************************************
+Fin Ajues de KIRO
+*******************************************/
+
+.sp-megamenu-parent>li>a {
+    color: #E9E9E9;
+}
+
+.sp-megamenu-parent>li:hover>a {
+    color: white;
+}
+
+.sp-megamenu-parent>li.active>a,
+.sp-megamenu-parent>li.active:hover>a {
+    color: rgb(203, 167, 82)
+}
+
+.com-ereservas .container {
+    max-width: 1170px;
+}
+
+.com-ereservas table {
+    overflow: auto;
+}
+
+.view-visitas #sp-main-body .container table thead tr th:first-child,
+.view-visitas #sp-main-body .container table tbody tr td:first-child,
+.view-tipovisitas #sp-main-body .container table thead tr th:first-child,
+.view-tipovisitas #sp-main-body .container table tbody tr td:first-child,
+.view-salas #sp-main-body .container table thead tr th:first-child,
+.view-salas #sp-main-body .container table tbody tr td:first-child {
+    display: none;
+}
+
+.com-ereservas i.icon-search:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f002";
+}
+
+.js-stools-container-bar .element-invisible {
+    display: none;
+}
+
+.com-ereservas #filter_search {
+    width: 200px;
+    display: block;
+    float: left;
+    border-radius: 0.25rem 0 0 0.25rem;
+}
+
+.com-ereservas #adminForm .js-stools .js-stools-container-bar {
+    padding-bottom: 15px;
+}
+
+.com-ereservas i.icon-edit:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f044";
+}
+
+.com-ereservas i.icon-trash:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f1f8";
+}
+
+.com-ereservas .btn.btn-micro.hasTooltip span.icon-checkedout:before {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    content: "\f023";
+}
+
+.com-ereservas aside#sp-left {
+    position: initial;
+    /* width: 25%; */
+    height: 150vh;
+    padding-top: 50px;
+}
+
+.com-ereservas aside#sp-left {
+    position: initial;
+    /* width: 25%; */
+    height: 150vh;
+    padding-top: 50px;
+}
+.itemid-171 .logo-image,
+.com-ereservas .logo-image{
+    height: 70px !important;
+}
+
+/*.visitas-acciones a:first-child{*/
+
+
+/*width: 40%;*/
+
+
+/*display: block;*/
+
+
+/*float: left;*/
+
+
+/*}*/
+
+
+/*.visitas-acciones a:nth-child(2){*/
+
+
+/*width: 40%;*/
+
+
+/*display: block;*/
+
+
+/*float: right;*/
+
+
+/*}*/
+
+
+/*.visitas-acciones a i:before{*/
+
+
+/*margin-left:-7px;*/
+
+
+/*}*/
+
+.com-ereservas form table td {
+    font-size: 12px;
+}
+
+.com-ereservas form table th {
+    font-size: 13px;
+}
+
+.com-ereservas tfoot .limit.float-right {
+    display: none;
+}
+
+.com-ereservas tfoot .pagination ul {
+    list-style: none;
+    margin: auto;
+    background-color: #efefef;
+    border: 1px solid #efefef;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.com-ereservas tfoot .pagination li {
+    display: block;
+    float: left;
+    padding: 15px;
+    border: 1px solid #ddd;
+}
+
+.com-ereservas tfoot .pagination li.active {
+    background: #806d35;
+    color: white;
+}
+
+.com-ereservas tfoot .pagination li:hover {
+    background: #806d35;
+}
+
+.com-ereservas tfoot .pagination li:hover a {
+    color: white;
+}
+
+div.pagination ul li a span {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+div.pagination li a span.icon-backward:before {
+    content: "\f04a";
+}
+
+div.pagination li a span.icon-step-backward:before {
+    content: "\f048";
+}
+
+div.pagination li a span.icon-step-forward:before {
+    content: "\f04e";
+}
+
+div.pagination li a span.icon-forward:before {
+    content: "\f051";
+}
+
+div.pagination li.disabled {
+    display: none;
+}
+
+.disponible,
+.preciopersona {
+    color: red;
+    font-size: 10px;
+}
+
+.btn-desencriptar {
+    padding: 4px 9px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 5px;
+}
+
+.btn.btn-micro.hasTooltip {
+    display: none;
+}
+
+.view-reservaform div.tarjeta #btn-desencriptar {
+    display: inline;
+    float: right;
+    margin-bottom: 5px;
+}
+
+.view-reservaform div.tarjeta .form-group {
+    display: inline;
+}
+
+.th-fecha {
+    width: 90px;
+}
+
+.btn.btn-mini {
+    background-color: #545b62;
+    border: 1px solid #4e555b;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    padding: 4px 0;
+    width: 35px;
+    -webkit-appearance: inherit;
+}
+
+.th-acciones {
+    width: 100px;
+}
+
+.cartas .card .card-img-top {
+    -webkit-filter: grayscale(100%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+    webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.cartas .card:hover .card-img-top {
+    -webkit-filter: grayscale(0%);
+    /* Safari 6.0 - 9.0 */
+    filter: grayscale(0%);
+    webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+#form-tipovisita .modal {
+    display: block;
+}
+
+.info-publica .js-editor-tinymce .toggle-editor {
+    display: none;
+}
+
+.view-visitasPublicas .body-innerwrapper {
+    overflow-x: unset;
+}
+
+#offcanvas-toggler>.fa {
+    color: #ffffff;
+}
+
+body.ltr #offcanvas-toggler.offcanvas-toggler-left {
+    float: right;
+}
+
+#offcanvas-toggler {
+    display: none;
+}
+
+#form-oculto-redsys {
+    display: none;
+}
+
+.cajapago {
+    padding: 15px 0;
+}
+
+p.avisopago {
+    font-weight: 400;
+    font-style: italic;
+    padding-top: 25px;
+}
+
+.cajapago ul {
+    display: block;
+    padding: 15px;
+    background: white;
+}
+
+.reserva-edit table tr:nth-child(2) {
+    background: white;
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+    background: #eee;
+    border-color: #eee;
+    color: black;
+}
+
+.cajapago li {
+    padding: 5px;
+}
+
+.tabla-informacionPago th,
+.tabla-informacionPago td{
+    border: 1px solid #888888;
+    text-transform: uppercase;
+}
+.tabla-informacionPago th{
+    font-weight: 600;
+}
+.tabla-informacionPago th{
+    text-align: center;
+}
+.tabla-informacionPago tr.colorDoradoUltimoRow td{
+    color:#cca445 ;
+    font-weight: bold;
+}
+.tabla-informacionPago tr.colorDoradoUltimoRow td:first-child{
+    border-right: none;
+    text-align: right;
+    text-transform: uppercase;
+}
+.tabla-informacionPago tr.colorDoradoUltimoRow td:nth-child(2){
+    border-left: none;
+}
+
+
+#form-reserva.formpago {
+    margin-top: 15px;
+}
+
+.finalizarpago {
+    padding-top: 25px;
+}
+
+.visita .seccion-texto {
+    padding: 50px 20px 0;
+}
+
+.visita .seccion-texto img {
+    padding: 0 20px;
+}
+
+.visita .reservas-calendario {
+    padding-top: 15px;
+}
+
+.texto-evento a {
+    display: inline-block;
+    float: right;
+    margin-right: 5px;
+    background-color: #806d35;
+    border-radius: 7px;
+    padding: 0 5px;
+    color: #fff;
+    font-weight: 300;
+    line-height: 28px;
+    margin-top: 2px;
+}
+
+.view-pagoform.itemid-0 #sp-title {
+    background-image: url("/images/cabecera_arroz.jpg");
+    background-position: bottom center;
+    min-height: 130px;
+    height: 130px;
+}
+
+.view-pagoform.itemid-0 #sp-header>.row {
+    background-image: url("/images/cabecera_arroz.jpg");
+    background-position: top center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* REGLA RARA CALENDARIO */
+
+.fc-row:first-child table {
+    border-top: none;
+}
+
+/******************************
+        MEDIA QUERIES
+********************************/
+@media screen and (max-width: 1460px) {
+    #sp-user3{
+        padding: 0px;
+    }
+    #sp-user3 .sp-module{
+        margin: 0px;
+    }
+    #sp-user3 ul.menu{
+        padding-left: 0px;
+    }
+    #sp-user3 .sp-module ul>li>a{
+        padding: 0 10px;
+    }
+}
+@media screen and (max-width: 992px) {
+    #offcanvas-toggler {
+        display: block;
+    }
+    #sp-user3,
+
+#sp-header #sp-menu .sp-megamenu-parent,
+body.en-gb #sp-header #sp-menu .sp-module.sp-megamenu-wrapper,#sp-user2 img  {
+        display:none !important;
+    }
+    body.ltr #offcanvas-toggler.offcanvas-toggler-right {
+        float: right;
+        margin-left: 20px;
+    }
+    body.ltr .header-sticky #offcanvas-toggler.offcanvas-toggler-right i{
+        color: black;
+    }
+    body:not(.layout-2023) #sp-header {
+        height: 160px;
+        left: 0;
+        position: relative;
+        top: 0;
+        width: 100%;
+        z-index: 99;
+        box-shadow: 0 0 4px 0 rgb(0 0 0 / 10%);
+    }
+    body:not(.layout-2023) #sp-logo,
+    body:not(.layout-2023) #sp-menu{
+        width: 50%;
+    }
+    body:not(.layout-2023) #sp-logo .logo{
+        height: 180px !important;
+    }
+    .form-horizontal .controls {
+        margin-left: 0px;
+    }
+
+    #sp-header.header-sticky #sp-menu .lang-inline {
+        margin-top: 15px;
+    }
+    
+}
+@media screen and (max-width: 500px) {
+    .layout-2023 section h2.sppb-addon-title:first-child{
+        font-size: 40px !important;
+    }
+    .sppb-addon-form-builder-form .sppb-form-group{
+        width: 70% !important;
+    }
+}
+/*Responsive Mario*/
+
+
+.fc-day.tienereserva.cierre-cierre.tienecierre{
+    background: white;
+}
+
+/* CSS Layout 2023 */
+
+/*Logo animado*/
+.logo-animado img{
+    animation:scale-in-ver-center 2s cubic-bezier(.25,.46,.45,.94) .5s both;
+}
+@-webkit-keyframes scale-in-ver-center {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+@keyframes scale-in-ver-center {
+    0% {
+        -webkit-transform: scaleY(0);
+        transform: scaleY(0);
+        opacity: 1;
+    }
+    100% {
+        -webkit-transform: scaleY(1);
+        transform: scaleY(1);
+        opacity: 1;
+    }
+}
+
+/* header */
+
+body:not(.com-sppagebuilder.view-page) #sp-header .logo {
+    height: 180px !important;
+    display: inline-flex !important;
+    margin: 0 !important;
+    align-items: center !important;
+}
+
+body:not(.com-sppagebuilder.view-page) #sp-header .logo {
+    height: 80px !important;
+    display: inline-flex !important;
+    margin: 0 !important;
+    align-items: center !important;
+    padding-top: 50px;
+}
+
+body.com-sppagebuilder.view-page #sp-header{
+    height: 80px;
+    width: 100%;
+    position: relative;
+    z-index: 99;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.1);
+    animation: spFadeIn 0.5s;
+}
+
+.logo-image {
+    height: 165px !important;
+}
+.layout-2023 .header-sticky #sp-menu,
+.layout-2023 #sp-menu {
+    max-width: 90% !important;
+    flex: 0 0 90%;
+    height: 50px;
+}
+
+.layout-2023 #offcanvas-toggler,
+.helix-ultimate #offcanvas-toggler{
+    display: inline-block;
+    height: inherit;
+}
+.offcanvas-overlay{
+    backdrop-filter: blur(0px);
+    background: none;
+}
+body.ltr.offcanvs-position-right .offcanvas-menu{
+    right: -400px;
+}
+.offcanvas-menu{
+    background:#151515;
+    overflow-y: hidden;
+    width: 400px;
+
+}
+.offcanvas-menu .offcanvas-inner{
+    background-image: linear-gradient(top, transparent, transparent 70%, #0a0a0a 70%, #0a0a0a 100%);
+    background-image: -webkit-linear-gradient(top, transparent, transparent 70%, #0a0a0a 70%, #0a0a0a 100%);
+}
+
+
+.offcanvas-menu .offcanvas-inner{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    align-content: stretch;
+    align-items: baseline;
+    max-height: 100%;
+    height: 100%;
+    padding: 40px;
+}
+.offcanvas-menu > div.d-flex.align-items-center .logo {
+    display: none;
+}
+.offcanvas-menu .offcanvas-inner .sp-module-content .menu li a{
+    color: white;
+    opacity: 1;
+    font-family: "Raleway";
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.offcanvas-menu .offcanvas-inner div.mod-languages ul li.lang-active a{
+    font-weight: bold;
+}
+
+.offcanvas-menu .offcanvas-inner .sp-module-content .menu li a:hover,
+.offcanvas-menu .offcanvas-inner .sp-module-content .menu li.active a,
+.offcanvas-menu .offcanvas-inner div.mod-languages ul li a:hover,
+.offcanvas-menu .offcanvas-inner ul.menu>li a:focus{
+    color: #d4a549 !important;
+}
+.offcanvas-menu .offcanvas-inner div.mod-languages ul li{
+    background-color: transparent !important;
+}
+.offcanvas-menu .offcanvas-inner div.mod-languages ul li a{
+    color: white;
+}
+
+.layout-2023 .burger-icon>span,
+.helix-ultimate .burger-icon>span{
+    background-color: white;
+}
+
+.layout-2023 #offcanvas-toggler,
+.helix-ultimate #offcanvas-toggler{
+    display: flex;
+}
+
+.layout-2023 .sppb-addon-divider-wrap .sppb-divider.sppb-divider-border {
+    width: 30% !important;
+}
+
+.layout-2023 .sppb-form-check .sppb-form-check-label {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.layout-2023 .sppb-form-check .sppb-form-check-label::before {
+    border: 1px solid rgb(179, 141, 63);
+    background: transparent !important;
+}
+.layout-2023 .sppb-form-check .sppb-form-check-label::after {
+    color: #b38d3f;
+}
+.layout-2023 a {
+    color: #b38d3f;
+}
+
+.layout-2023 .sppb-form-builder-btn .sppb-btn-primary {
+    background-color: transparent !important;
+    color: rgb(179, 141, 63) !important;
+    border: 2px solid;
+    padding: 10px 75px;
+    font-size: 20px;
+    margin: 20px 0px 0px 20% !important;
+}
+.layout-2023 .sppb-addon-form-builder-form .chzn-container.chzn-container-single .chzn-single{
+    background: transparent;
+    border: 1px solid rgb(179, 141, 63);
+    color: white;
+}
+
+.layout-2023 .sppb-form-builder-btn .sppb-btn-primary:hover {
+    color: white !important;
+    border: 2px solid white;
+}
+
+.btn.btn-primary{
+    background-color: #d1a449;
+    border-color: #d1a449;
+    float: left;
+    border-radius: 0;
+    text-transform: uppercase;
+}
+.btn.btn-primary:hover{
+    background-color: #ffffff;
+    border-color: #d1a449;
+    color: #d1a449;
+}
+
+.com-ereservas.view-pagoform #sp-main-body{
+    min-height: auto;
+}
+.com-ereservas.view-pagoform #sp-main-body h1,
+.com-ereservas.view-pagoform #sp-main-body h3{
+    font-family: Raleway;
+}
+.com-ereservas.view-pagoform #sp-main-body i{
+    font-size: 4rem;
+    text-align: center;
+}
+#sp-bottom .sp-module {
+    margin-bottom: 0px;
+}
+#sp-bottom .texto-footer .sppb-addon-content > div:first-child{
+    font-weight: 100;
+    margin: 20px 0px;
+}
+#sp-bottom .texto-footer .sppb-addon-content  a{
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+}
+/* Cookies */
+#cpnb .cpnb-warningBox-show-fade-in{
+    background: black !important;
+}
+#cpnb .cpnb-warningBox-show-fade-in .cpnb-message{
+    color: white !important;
+}

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="nombre" filter="safehtml" type="text" required="true" message="Rellene el campo nombre" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_NOMBRE" description="COM_ERESERVAS_FORM_DESC_TIPOVISITA_NOMBRE" hint="COM_ERESERVAS_FORM_LBL_TIPOVISITA_NOMBRE"/>
+    <field name="alias" filter="safehtml" type="text" message="Rellene el campo alias" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_ALIAS" description="COM_ERESERVAS_FORM_DESC_TIPOVISITA_ALIAS" hint="COM_ERESERVAS_FORM_LBL_TIPOVISITA_ALIAS"/>
+    <field name="nombre_en" filter="safehtml" type="text" message="Rellene el campo nombre" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_NOMBRE_EN" description="COM_ERESERVAS_FORM_DESC_TIPOVISITA_NOMBRE_EN" hint="COM_ERESERVAS_FORM_LBL_TIPOVISITA_NOMBRE_EN"/>
+    <field name="alias_en" filter="safehtml" type="text" message="Rellene el campo alias" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_ALIAS_EN" description="COM_ERESERVAS_FORM_DESC_TIPOVISITA_ALIAS_EN" hint="COM_ERESERVAS_FORM_LBL_TIPOVISITA_ALIAS_EN"/>
+    <field name="imagen" directory="" type="media" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_IMAGEN" description="COM_ERESERVAS_FORM_DESC_TIPOVISITA_IMAGEN" hint="COM_ERESERVAS_FORM_LBL_TIPOVISITA_IMAGEN"/>
+    <field name="aforo_web" filter="safehtml" type="number" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_AFORO_WEB" description="COM_ERESERVAS_FORM_DESC_TIPOVISITA_AFORO_WEB" hint="COM_ERESERVAS_FORM_LBL_TIPOVISITA_AFORO_WEB"/>
+    <field name="aforo_privado" filter="safehtml" type="number" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_AFORO_PRIVADO" description="COM_ERESERVAS_FORM_DESC_TIPOVISITA_AFORO_PRIVADO" hint="COM_ERESERVAS_FORM_LBL_TIPOVISITA_AFORO_PRIVADO"/>
+    <field name="comida" type="list" required="true" message="Rellene el campo comida" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_COMIDA" description="COM_ERESERVAS_FORM_DESC_TIPOVISITA_COMIDA" hint="COM_ERESERVAS_FORM_LBL_TIPOVISITA_COMIDA">
+      <option value="si">COM_ERESERVAS_TIPOVISITAS_COMIDA_OPTION_SI</option>
+      <option value="no">COM_ERESERVAS_TIPOVISITAS_COMIDA_OPTION_NO</option>
+    </field>
+    <field name="cata" type="list" required="true" message="Rellene el campo Cata" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_CATA" description="COM_ERESERVAS_FORM_DESC_TIPOVISITA_CATA" hint="COM_ERESERVAS_FORM_LBL_TIPOVISITA_CATA">
+      <option value="si">COM_ERESERVAS_TIPOVISITAS_CATA_OPTION_SI</option>
+      <option value="no">COM_ERESERVAS_TIPOVISITAS_CATA_OPTION_NO</option>
+    </field>
+    <field name="id_sala" type="foreignkey" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_ID_SALA" description="COM_ERESERVAS_FORM_DESC_TIPOVISITA_ID_SALA" class="inputbox" input_type="list" table="#__ereservas_sala" key_field="id" value_field="nombre" multiple="multiple" default="0"/>
+    <field name="observaciones" filter="safehtml" type="textarea" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_OBSERVACIONES" description="COM_ERESERVAS_FORM_DESC_TIPOVISITA_OBSERVACIONES" hint="COM_ERESERVAS_FORM_LBL_TIPOVISITA_OBSERVACIONES"/>
+    <field name="precio" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_PRECIO" description="COM_ERESERVAS_FORM_DESC_TIPOVISITA_PRECIO" hint="COM_ERESERVAS_FORM_LBL_TIPOVISITA_PRECIO"/>
+    <field name="presentacion" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_PRESENTACION" description="COM_ERESERVAS_FORM_DESC_TIPOVISITA_PRESENTACION" hint="COM_ERESERVAS_FORM_LBL_TIPOVISITA_PRESENTACION"/>
+    <field name="descripcion" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_DESCRIPCION" description="COM_ERESERVAS_FORM_DESC_TIPOVISITA_DESCRIPCION" hint="COM_ERESERVAS_FORM_LBL_TIPOVISITA_DESCRIPCION"/>
+    <field name="presentacion_en" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_PRESENTACION_EN" description="COM_ERESERVAS_FORM_DESC_TIPOVISITA_PRESENTACION_EN" hint="COM_ERESERVAS_FORM_LBL_TIPOVISITA_PRESENTACION_EN"/>
+    <field name="descripcion_en" editor="|" buttons="false" filter="JComponentHelper::filterText" type="editor" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_DESCRIPCION_EN" description="COM_ERESERVAS_FORM_DESC_TIPOVISITA_DESCRIPCION_EN" hint="COM_ERESERVAS_FORM_LBL_TIPOVISITA_DESCRIPCION_EN"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

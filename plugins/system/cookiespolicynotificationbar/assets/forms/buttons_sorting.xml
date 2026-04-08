@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+        <field name="button_name" type="text" default="" label="PLG_SYSTEM_CPNB_BUTTONS_SORTING_BUTTON_NAME_LBL" description="PLG_SYSTEM_CPNB_BUTTONS_SORTING_BUTTON_NAME_DESC" size="10" readonly="true" />
+        <field name="button_id" type="hidden" readonly="true" />
+    </fieldset>
+</form>

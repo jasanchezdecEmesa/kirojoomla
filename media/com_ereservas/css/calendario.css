@@ -1,0 +1,340 @@
+.view-calendarioreservas .margen {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+#eventos,
+#formulariovisita,
+#resultado,
+#formularioreserva {
+    margin: 15px 0;
+}
+
+#eventos {
+    margin-top: 0;
+}
+
+.view-calendarioreservas h1 {
+    font-size: 1.5rem;
+}
+#eventos #cambiarvisitabutton{
+    color: darkslategray;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.view-calendarioreservas h2 {
+    font-size: 1.25em;
+}
+
+.fc-button {
+    font-size: 0.8em;
+}
+
+.fc-left {
+    padding-left: 2px;
+}
+
+.fc table {
+    font-size: 0.9em;
+}
+
+.fc-toolbar.fc-header-toolbar {
+    margin-bottom: 0.2em;
+}
+.leyenda .color{
+    padding-left: 16px;
+    border: 1px solid black;
+}
+.texto{
+    padding: 20px;
+    margin: 25px 0px;
+}
+.leyenda p {
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 0px;
+}
+
+.esizd {
+    padding-left: 5px;
+}
+
+.fc-day.cierre-cierre,
+.leyenda .color.cierre-cierre,
+.fc-day.fc-dom{
+    background-color: #45454582;
+}
+.fc-day.tienereserva,
+.leyenda .color.tienereserva {
+    background-color: #a900ff6e;
+}
+/*.fc-day.cierre-festivo-laboral,
+.leyenda .color.cierre-festivo-laboral {
+    background-color: #c2e99e7d;
+}*/
+.fc-day.tienereserva.cierre-festivo-laboral,
+.leyenda .color.tienereserva.cierre-festivo-laboral,
+.fc-day.fc-dom.tienereserva{
+    background-color: #78c0367d;
+}
+.fc-day.cierre-sin-visita,
+.leyenda .color.cierre-sin-visita{
+    background-color: rgba(73, 187, 192, 0.49);
+}
+
+
+.fc-day.tienereserva.cierre-cierre,
+.leyenda .color.tienereserva.cierre-cierre,
+.fc-day.tienereserva.cierre-sin-visita{
+    background-color: #dd0656a1;
+}
+
+.fc-day,
+.fc-day-top {
+    cursor: pointer;
+}
+.fc-other-month {
+    cursor: auto;
+}
+.fc-row .fc-content-skeleton {
+    padding-bottom: 0px;
+}
+.leyenda h3 {
+    font-size: 12px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-style: italic;
+}
+.leyenda {
+    padding-top: 5px;
+}
+.leyenda .texto {
+    padding: 5px 0;
+    margin: 0 0 15px;
+}
+
+.fc-dayGrid-view .fc-body .fc-row {
+    min-height: 3em;
+    height: 3em;
+}
+
+#form-guia-res label,
+#form-guia label,
+#form-guia-res input,
+#form-guia input,
+#form-guia-res .chzn-container span,
+#form-guia .chzn-container span,
+#form-guia-res .chzn-results li,
+#form-guia .chzn-results li,
+textarea.form-control {
+    font-size: 12px;
+}
+
+#form-guia-res .chzn-container.chzn-container-single .chzn-single,
+#form-guia .chzn-container.chzn-container-single .chzn-single {
+    line-height: 1.65;
+    height: 35px;
+}
+
+#eventos table,
+#resultado table {
+    width: 100%;
+}
+
+#eventos table td,
+#resultado table td {
+    border: 1px solid #bbb;
+}
+
+#eventos thead,
+#resultado thead {
+    font-size: 14px;
+    background-color: #ddd;
+    line-height: 32px;
+    font-weight: 500;
+}
+
+#eventos tbody,
+#resultado tbody {
+    font-size: 12px;
+}
+
+#eventos tbody td,
+#resultado tbody td {
+    padding: 2px 4px;
+}
+
+#eventos tbody tr:nth-child(even),
+#resultado tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+#eventos tbody a,
+#resultado tbody a {
+    color: darkslategray;
+    font-weight: bold;
+    padding: 3px 7px;
+    border-radius: 5px;
+    margin: 2px 0;
+    display: inline-block;
+}
+
+#eventos tbody a:hover,
+#resultado tbody a:hover {
+    color: grey;
+}
+
+.texto-evento {
+    padding-left: 10px;
+}
+
+.cabeceras-evento td {
+    font-size: 12px;
+    line-height: 24px;
+    padding-left: 5px;
+}
+
+#formulariovisita,
+#formularioreserva {
+    border: 1px solid #bbb;
+}
+
+#formulariovisita h3,
+#formularioreserva h3 {
+    border-bottom: 1px solid #bbb;
+    font-size: 12px;
+    line-height: 32px;
+    background-color: #ddd;
+    padding-left: 10px;
+    font-weight: 500;
+    margin: 0;
+}
+
+#formulariovisita #form-guia,
+#formulariovisita #form-guia-res,
+#formularioreserva form {
+    padding: 10px 10px 15px;
+    background-color: #f9f9f9;
+}
+
+#formularioreserva #form-guia-res {
+    padding-bottom: 15px;
+}
+
+#formularioreserva #form-guia-res .chzn-container .chzn-results {
+    max-height: 100px;
+}
+
+#formulariovisita button.enviarvisita,
+#formularioreserva button.enviarreserva {
+    margin-top: 24px;
+    padding: 7px 8px 9px 8px;
+    display: block;
+    line-height: 14px;
+}
+
+#formulariovisita label,
+#formularioreserva label {
+    margin-bottom: 0;
+}
+
+#formulariovisita input,
+#formulariovisita select,
+#formularioreserva input,
+#formularioreserva select {
+    margin-bottom: 10px;
+}
+
+.view-calendarioreservas #system-message-container.completa {
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.view-calendarioreservas #system-message-container .alert {
+    max-width: 640px;
+    width: 80%;
+    margin: 200px auto 0;
+    font-size: 20px;
+}
+
+#formularioreserva {
+    overflow: hidden;
+}
+
+#enviarpago,
+#enviarconfirmacion,
+#cancelar,
+#confirmarasistencia,
+#editarreserva,
+#cambiarfechabutton
+{
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    color: darkslategray ;
+    cursor: pointer;
+}
+.pulsamiento-nueva-fecha{
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    color: darkslategray !important ;
+    cursor: pointer;
+}
+.pulsamiento-nueva-fecha:hover{
+    color: grey !important;
+    text-decoration: underline !important;
+}
+#cambiofechamodal input[type="text"]:disabled,
+#cambiofechamodal input[type="email"]:disabled{
+    background-color: rgba(0, 0, 0, 0.1) !important;
+    border-color: rgba(118, 118, 118, 0.3);
+    cursor: not-allowed;
+}
+
+#enviarpago:hover,
+#enviarconfirmacion:hover,
+#cancelar:hover,
+#confirmarasistencia:hover,
+#editarreserva:hover,
+#cambiarfechabutton:hover,
+.pulsamiento-nueva-fecha:hover{
+    color: grey;
+}
+#resultado tr.asistenciaconfirmada{
+    background-color: #c5ffc4 !important;
+}
+
+#resultado tr.reservacancelada{
+    background-color: #ffd0d0 !important;
+    color: #ab1414;
+}
+
+.checkbox-enviarcorreo{
+    margin-top: 25px;
+}
+#jform_mandarcorreo{
+    margin-right: 10px;
+}
+#fechavisitaform{
+    display: none;
+}
+.textarea-observaciones-reserva{
+    width: 100%;
+}
+span.badge-danger{
+    font-size: 100%;
+    font-weight: bold;
+    border-radius: 100%;
+}
+.aforo-negativo{
+    font-weight: bold;
+    color: red;
+}

@@ -1,0 +1,135 @@
+.icon-48-visitas {
+      background-image: url(../images/l_visitas.png);
+      padding-left:60px!important;
+}
+
+.icon-48-visita {
+      background-image: url(../images/l_visitas.png);
+      padding-left:60px!important;
+}
+
+.color-box-visitas { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-tipovisitas {
+      background-image: url(../images/l_tipovisitas.png);
+      padding-left:60px!important;
+}
+
+.icon-48-tipovisita {
+      background-image: url(../images/l_tipovisitas.png);
+      padding-left:60px!important;
+}
+
+.color-box-tipovisitas { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-salas {
+      background-image: url(../images/l_salas.png);
+      padding-left:60px!important;
+}
+
+.icon-48-sala {
+      background-image: url(../images/l_salas.png);
+      padding-left:60px!important;
+}
+
+.color-box-salas { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-idiomas {
+      background-image: url(../images/l_idiomas.png);
+      padding-left:60px!important;
+}
+
+.icon-48-idioma {
+      background-image: url(../images/l_idiomas.png);
+      padding-left:60px!important;
+}
+
+.color-box-idiomas { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-paiss {
+      background-image: url(../images/l_paiss.png);
+      padding-left:60px!important;
+}
+
+.icon-48-pais {
+      background-image: url(../images/l_paiss.png);
+      padding-left:60px!important;
+}
+
+.color-box-paiss { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-tipoclientes {
+      background-image: url(../images/l_tipoclientes.png);
+      padding-left:60px!important;
+}
+
+.icon-48-tipocliente {
+      background-image: url(../images/l_tipoclientes.png);
+      padding-left:60px!important;
+}
+
+.color-box-tipoclientes { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-reservas {
+      background-image: url(../images/l_reservas.png);
+      padding-left:60px!important;
+}
+
+.icon-48-reserva {
+      background-image: url(../images/l_reservas.png);
+      padding-left:60px!important;
+}
+
+.color-box-reservas { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-guias {
+      background-image: url(../images/l_guias.png);
+      padding-left:60px!important;
+}
+
+.icon-48-guia {
+      background-image: url(../images/l_guias.png);
+      padding-left:60px!important;
+}
+
+.color-box-guias { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-calendarios {
+      background-image: url(../images/l_calendarios.png);
+      padding-left:60px!important;
+}
+
+.icon-48-calendario {
+      background-image: url(../images/l_calendarios.png);
+      padding-left:60px!important;
+}
+
+.color-box-calendarios { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+.icon-48-facturas {
+      background-image: url(../images/l_facturas.png);
+      padding-left:60px!important;
+}
+
+.icon-48-factura {
+      background-image: url(../images/l_facturas.png);
+      padding-left:60px!important;
+}
+
+.color-box-facturas { 
+      float: left;      width: 15px;      height: 15px;      margin-right: 5px;      border: 1px solid rgba(0, 0, 0, .2);}
+
+
+
+.other-filters{
+    padding: 0 14px;
+}

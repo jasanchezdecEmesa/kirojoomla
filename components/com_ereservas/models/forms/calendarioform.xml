@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="fecha_inicio" class="inputbox" format="%Y-%m-%d" timeformat="24" filter="user_utc" translateformat="false" showtime="false" singleheader="false" todaybutton="false" weeknumbers="false" filltable="false" type="calendar" label="COM_ERESERVAS_FORM_LBL_CALENDARIO_FECHA_INICIO" description="COM_ERESERVAS_FORM_DESC_CALENDARIO_FECHA_INICIO" hint="COM_ERESERVAS_FORM_LBL_CALENDARIO_FECHA_INICIO"/>
+    <field name="fecha_fin" class="inputbox" format="%Y-%m-%d" timeformat="24" filter="user_utc" translateformat="false" showtime="false" singleheader="false" todaybutton="false" weeknumbers="false" filltable="false" type="calendar"  label="COM_ERESERVAS_FORM_LBL_CALENDARIO_FECHA_FIN" description="COM_ERESERVAS_FORM_DESC_CALENDARIO_FECHA_FIN" hint="COM_ERESERVAS_FORM_LBL_CALENDARIO_FECHA_FIN"/>
+    <field name="id_tipo_visita" type="foreignkey" label="COM_ERESERVAS_FORM_LBL_CALENDARIO_ID_TIPO_VISITA" description="COM_ERESERVAS_FORM_DESC_CALENDARIO_ID_TIPO_VISITA" class="inputbox" input_type="list" table="#__ereservas_tipo_visita" key_field="id" value_field="nombre" required="true" default=""/>
+    <field name="hora_inicio" default="00:00:00" required="true" label="COM_ERESERVAS_FORM_LBL_CALENDARIO_HORA_INICIO" description="COM_ERESERVAS_FORM_DESC_CALENDARIO_HORA_INICIO" hint="COM_ERESERVAS_FORM_LBL_CALENDARIO_HORA_INICIO"/>
+    <field name="hora_final" default="00:00:00" label="COM_ERESERVAS_FORM_LBL_CALENDARIO_HORA_FINAL" description="COM_ERESERVAS_FORM_DESC_CALENDARIO_HORA_FINAL" hint="COM_ERESERVAS_FORM_LBL_CALENDARIO_HORA_FINAL"/>
+    <field name="frecuencia" type="list" required="true" label="COM_ERESERVAS_FORM_LBL_CALENDARIO_FRECUENCIA" description="COM_ERESERVAS_FORM_DESC_CALENDARIO_FRECUENCIA" hint="COM_ERESERVAS_FORM_LBL_CALENDARIO_FRECUENCIA">
+      <option value="diaria">COM_ERESERVAS_CALENDARIOS_FRECUENCIA_OPTION_DIARIA</option>
+      <option value="mensual">COM_ERESERVAS_CALENDARIOS_FRECUENCIA_OPTION_MENSUAL</option>
+    </field>
+    <field name="idioma" type="foreignkey" label="COM_ERESERVAS_FORM_LBL_VISITA_IDIOMA" required="true" description="COM_ERESERVAS_FORM_DESC_VISITA_IDIOMA" class="inputbox" input_type="list" table="#__ereservas_idioma" key_field="id" value_field="nombre" default="0"/>
+    <field name="dias_puntuales" class="inputbox" format="%Y-%m-%d" timeformat="24" filter="user_utc" translateformat="false" showtime="false" singleheader="false" todaybutton="false" weeknumbers="false" filltable="false" type="calendar" label="COM_ERESERVAS_FORM_LBL_CALENDARIO_DIAS_PUNTUALES" description="COM_ERESERVAS_FORM_DESC_CALENDARIO_DIAS_PUNTUALES" hint="COM_ERESERVAS_FORM_LBL_CALENDARIO_DIAS_PUNTUALES" showon="frecuencia:mensual" />
+    <field name="diaspuntuales" type="hidden"/>
+    <field name="dias_semana" type="checkboxes" multiple="true" label="COM_ERESERVAS_FORM_LBL_CALENDARIO_DIAS_SEMANA" description="COM_ERESERVAS_FORM_DESC_CALENDARIO_DIAS_SEMANA" hint="COM_ERESERVAS_FORM_LBL_CALENDARIO_DIAS_SEMANA" showon="frecuencia:diaria">
+      <option value="1">COM_ERESERVAS_CALENDARIOS_DIAS_SEMANA_OPTION_1</option>
+      <option value="2">COM_ERESERVAS_CALENDARIOS_DIAS_SEMANA_OPTION_2</option>
+      <option value="3">COM_ERESERVAS_CALENDARIOS_DIAS_SEMANA_OPTION_3</option>
+      <option value="4">COM_ERESERVAS_CALENDARIOS_DIAS_SEMANA_OPTION_4</option>
+      <option value="5">COM_ERESERVAS_CALENDARIOS_DIAS_SEMANA_OPTION_5</option>
+      <option value="6">COM_ERESERVAS_CALENDARIOS_DIAS_SEMANA_OPTION_6</option>
+      <option value="7">COM_ERESERVAS_CALENDARIOS_DIAS_SEMANA_OPTION_7</option>
+    </field>
+
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+
+</form>

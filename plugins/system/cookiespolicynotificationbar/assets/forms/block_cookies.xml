@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset>
+
+        <field name="blockcookiecategory" id="blockcookiecategory" type="blockcookiecategory" label="PLG_SYSTEM_CPNB_BLOCK_COOKIE_CATEGORY_LBL" addfieldpath="/plugins/system/cookiespolicynotificationbar/elements" description="PLG_SYSTEM_CPNB_BLOCK_COOKIE_CATEGORY_DESC" />
+
+        <field name="block_cookie_name" type="text" label="PLG_SYSTEM_CPNB_BLOCK_COOKIE_NAME_LBL" description="PLG_SYSTEM_CPNB_BLOCK_COOKIE_NAME_DESC" />
+        
+        <field name="block_cookie_js_code" type="textarea" default="" label="PLG_SYSTEM_CPNB_BLOCK_COOKIE_JS_CODE_LBL" description="PLG_SYSTEM_CPNB_BLOCK_COOKIE_JS_CODE_DESC" rows="6" cols="100" filter="raw" class="block_cookie_js_code" />
+        
+        <field name="block_cookie_placement" type="list" class="btn-group btn-group-yesno" default="head" label="PLG_SYSTEM_CPNB_BLOCK_COOKIE_PLACEMENT_LBL" description="PLG_SYSTEM_CPNB_BLOCK_COOKIE_PLACEMENT_DESC">
+            <option value="head">PLG_SYSTEM_CPNB_BLOCK_COOKIE_PLACEMENT_HEAD_OPTION</option>
+            <option value="body_top">PLG_SYSTEM_CPNB_BLOCK_COOKIE_PLACEMENT_BODY_TOP_OPTION</option>
+            <option value="body_bottom">PLG_SYSTEM_CPNB_BLOCK_COOKIE_PLACEMENT_BODY_BOTTOM_OPTION</option>
+        </field>
+
+        <field name="block_cookie_load_script_time" type="list" class="btn-group btn-group-yesno" default="alltime" label="PLG_SYSTEM_CPNB_BLOCK_COOKIE_LOAD_SCRIPT_TIME_LBL" description="PLG_SYSTEM_CPNB_BLOCK_COOKIE_LOAD_SCRIPT_TIME_DESC">
+            <option value="alltime">PLG_SYSTEM_CPNB_BLOCK_COOKIE_LOAD_SCRIPT_TIME_ALLTIME_OPTION</option>
+            <option value="after">PLG_SYSTEM_CPNB_BLOCK_COOKIE_LOAD_SCRIPT_TIME_AFTER_OPTION</option>
+            <option value="before">PLG_SYSTEM_CPNB_BLOCK_COOKIE_LOAD_SCRIPT_TIME_BEFORE_OPTION</option>
+        </field>
+       
+        <field 
+            name="block_cookie_language" 
+            type="contentlanguage"
+            label="PLG_SYSTEM_CPNB_BLOCK_COOKIE_LANGUAGE_LBL"
+            description="PLG_SYSTEM_CPNB_BLOCK_COOKIE_LANGUAGE_DESC"
+            default="*">
+            <option value="*">JALL</option>
+        </field>
+
+        <field name="block_cookie_status" type="list" class="btn-group btn-group-yesno" default="1" label="PLG_SYSTEM_CPNB_STATUS_LBL" description="PLG_SYSTEM_CPNB_STATUS_DESC">
+            <option value="1">JENABLED</option>
+            <option value="0">JDISABLED</option>
+        </field>
+        
+    </fieldset>
+</form>

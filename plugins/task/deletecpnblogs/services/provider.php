@@ -1,0 +1,48 @@
+<?php
+/* ======================================================
+ # Cookies Policy Notification Bar for Joomla! - v4.3.5 (pro version)
+ # -------------------------------------------------------
+ # For Joomla! CMS (v3.x)
+ # Author: Web357 (Yiannis Christodoulou)
+ # Copyright (©) 2014-2024 Web357. All rights reserved.
+ # License: GNU/GPLv3, http://www.gnu.org/licenses/gpl-3.0.html
+ # Website: https:/www.web357.com
+ # Demo: https://demo.web357.com/joomla/browse/cookies-policy-notification-bar
+ # Support: support@web357.com
+ # Last modified: Monday 27 May 2024, 01:57:48 PM
+ ========================================================= */
+defined('_JEXEC') or die;
+
+use Joomla\CMS\Extension\PluginInterface;
+use Joomla\CMS\Factory;
+use Joomla\CMS\Plugin\PluginHelper;
+use Joomla\Database\DatabaseInterface;
+use Joomla\DI\Container;
+use Joomla\DI\ServiceProviderInterface;
+use Joomla\Event\DispatcherInterface;
+use Joomla\Plugin\Task\Deletecpnblogs\Extension\Deletecpnblogs;
+
+return new class () implements ServiceProviderInterface {
+    /**
+     * Registers the service provider with a DI container.
+     * @param   Container  $container  The DI container.
+     * @return  void
+     * @since   4.3.0
+     */
+    public function register(Container $container): void
+    {
+        $container->set(
+            PluginInterface::class,
+            function (Container $container) {
+                $plugin = new Deletecpnblogs(
+                    $container->get(DispatcherInterface::class), 
+                    (array) PluginHelper::getPlugin('task', 'deletecpnblogs'),
+                );
+                $plugin->setApplication(Factory::getApplication());
+                $plugin->setDatabase($container->get(DatabaseInterface::class));
+
+                return $plugin;
+            }
+        );
+    }
+};

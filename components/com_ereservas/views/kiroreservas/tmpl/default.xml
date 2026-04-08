@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Reservas Admin Kiro" option="View">
+        <message>
+                        <![CDATA[Panel de administración de reservas de Kiro]]>
+        </message>
+	</layout>
+</metadata>

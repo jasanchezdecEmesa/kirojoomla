@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" hint="COM_ERESERVAS_SEARCH_FILTER_SUBMIT"
+               label="COM_USERS_FILTER_SEARCH_DESC"
+               class="js-stools-search-string" />
+
+        <field name="id_sala" type="sql" label="COM_ERESERVAS_FORM_LBL_TIPOVISITA_ID_SALA" query="SELECT '' AS `id`, 'COM_ERESERVAS_TIPOVISITAS_ID_SALA_FILTER' AS `val` UNION SELECT `id` AS `id`, `nombre` AS val FROM `#__ereservas_sala`" key_field="id" value_field="val" class="inputbox" onchange="this.form.submit()" translate="true"/>
+
+
+    </fields>
+</form>

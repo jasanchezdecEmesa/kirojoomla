@@ -1,0 +1,59 @@
+#calendario-puntual .js-calendar.blockimpt {
+    display: block !important;
+    box-shadow: none !important;
+    position: relative !important;
+    width: 50%;
+    float: right;
+    min-width: 360px;
+    padding: 0;
+    margin: 0;
+}
+
+#calendario-puntual .js-calendar.blockimpt .calendar-container {
+    border: 1px solid black;
+    border-radius: 0;
+    float: right;
+}
+
+#calendario-puntual {
+    overflow: auto;
+}
+
+#calendario-puntual .input-group {
+    display: none;
+}
+
+#diaspuntuales {
+    float: left;
+    width: 50%;
+    padding: 0;
+    margin: -300px 0 0;
+}
+
+#diaspuntuales li {
+    list-style: none;
+    display: inline-block;
+    background-color: #ccc;
+    padding: 0;
+    border-radius: 5px;
+    color: #fff;
+    margin: 4px;
+}
+
+#diaspuntuales button {
+    background-color: #cacaca;
+    color: #fff;
+    display: inline-block;
+    border-radius: 100%;
+    border: none;
+    margin: 2px;
+    padding: 2px 10px;
+}
+
+#diaspuntuales button:hover {
+    cursor: pointer;
+}
+
+#diaspuntuales button span {
+    padding-left: 10px;
+}

@@ -1,0 +1,15 @@
+DROP TABLE IF EXISTS `#__ereservas_visita`;
+DROP TABLE IF EXISTS `#__ereservas_tipo_visita`;
+DROP TABLE IF EXISTS `#__ereservas_sala`;
+DROP TABLE IF EXISTS `#__ereservas_idioma`;
+DROP TABLE IF EXISTS `#__ereservas_pais`;
+DROP TABLE IF EXISTS `#__ereservas_tipo_cliente`;
+DROP TABLE IF EXISTS `#__ereservas_reserva`;
+DROP TABLE IF EXISTS `#__ereservas_guias`;
+DROP TABLE IF EXISTS `#__ereservas_calendario`;
+DROP TABLE IF EXISTS `#__ereservas_factura`;
+DROP TABLE IF EXISTS `#__ereservas_servicio_semanal`;
+DROP TABLE IF EXISTS `#__ereservas_fechas_apertura`;
+DROP TABLE IF EXISTS `#__ereservas_cierres`;
+DROP TABLE IF EXISTS `#__ereservas_cancelaciones`;
+DROP TABLE IF EXISTS `#__ereservas_lista_espera`;

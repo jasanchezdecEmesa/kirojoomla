@@ -1,0 +1,485 @@
+.view-calendarioreservas .margen {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+#eventos,
+#formulariovisita,
+#resultado,
+#formularioreserva {
+    margin: 15px 0;
+}
+
+#eventos {
+    margin-top: 0;
+}
+
+.view-calendarioreservas h1 {
+    font-size: 1.5rem;
+}
+
+.view-calendarioreservas h2 {
+    font-size: 1.25em;
+}
+
+.fc-button {
+    font-size: 0.8em;
+}
+
+.fc-left {
+    padding-left: 2px;
+}
+
+.fc table {
+    font-size: 0.9em;
+}
+
+.fc-toolbar.fc-header-toolbar {
+    margin-bottom: 0.2em;
+}
+.leyenda .color{
+    padding-left: 16px;
+    border: 1px solid black;
+}
+.texto{
+    padding: 20px;
+    margin: 25px 0px;
+}
+.leyenda p {
+    font-size: 12px;
+    font-style: italic;
+    margin-bottom: 0px;
+}
+
+.esizd {
+    padding-left: 5px;
+}
+
+.view-visita .fc-day,
+.view-visita .fc-day-header {
+    background-color: #ffffff;
+}
+
+.fc-day.cierre-cierre,
+.leyenda .color.cierre-cierre,
+.fc-day.fc-dom,
+.fc-day.fc-lun,
+.fc-day[data-date="2021-08-17"],
+.fc-day[data-date="2021-08-03"],
+.fc-day[data-date="2021-08-04"],
+.fc-day[data-date="2021-08-05"],
+.fc-day[data-date="2021-08-06"],
+.fc-day[data-date="2021-08-07"],
+.fc-day[data-date="2021-08-10"],
+.fc-day[data-date="2021-08-11"],
+.fc-day[data-date="2021-08-12"],
+.fc-day[data-date="2021-08-13"],
+.fc-day[data-date="2021-08-14"],
+.fc-day[data-date="2021-09-24"],
+.fc-day[data-date="2021-09-25"]{
+    background-color: #45454533;
+}
+.fc-day.tienereserva,
+.leyenda .color.tienereserva {
+    color: #7cff83;
+}
+
+.fc-day.tienereserva.cierre-cierre,
+.leyenda .color.tienereserva.cierre-cierre,
+.fc-day.tienereserva.cierre-sin-visita,
+.fc-day.sinplazas {
+    background-color: #e3a4bba1;
+}
+
+.fc .fc-row .fc-bg .fc-widget-content.sinplazas{
+    background: #dd06556b;
+}
+
+.fc .fc-row .fc-bg .fc-widget-content.tienereserva {
+    background: #78c0367d;
+}
+.fc-unthemed td.fc-today {
+     background: none;
+}
+
+/*.fc-day.cierre-festivo-laboral,
+.leyenda .color.cierre-festivo-laboral {
+    background-color: #c2e99e7d;
+}*/
+
+.fc-day.tienecierre,
+.leyenda .color.tienecierre {
+    background-color: #e3a4bba1;
+}
+
+.fc-day.tienereserva.cierre-festivo-laboral,
+.leyenda .color.tienereserva.cierre-festivo-laboral,
+.fc-day.fc-dom.tienereserva{
+    background-color: #78c0367d;
+}
+.fc-day.cierre-sin-visita,
+.leyenda .color.cierre-sin-visita{
+    background-color: rgba(73, 187, 192, 0.49);
+}
+
+.fc-day,
+.fc-day-top {
+    cursor: pointer;
+}
+.fc-other-month {
+    cursor: auto;
+}
+.fc-row .fc-content-skeleton {
+    padding-bottom: 0px;
+}
+.leyenda h3 {
+    font-size: 12px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    font-style: italic;
+}
+.leyenda {
+    padding-top: 5px;
+}
+.leyenda .texto {
+    padding: 5px 0;
+    margin: 0 0 15px;
+}
+
+.fc-dayGrid-view .fc-body .fc-row {
+    min-height: 3em;
+    height: 3em;
+}
+
+#form-guia-res label,
+#form-guia label,
+#form-guia-res input,
+#form-guia input,
+#form-guia-res .chzn-container span,
+#form-guia .chzn-container span,
+#form-guia-res .chzn-results li,
+#form-guia .chzn-results li,
+textarea.form-control {
+    font-size: 12px;
+}
+
+#form-guia-res .chzn-container.chzn-container-single .chzn-single,
+#form-guia .chzn-container.chzn-container-single .chzn-single {
+    line-height: 1.65;
+    height: 35px;
+}
+
+#eventos table,
+#resultado table {
+    width: 100%;
+}
+
+#eventos table td,
+#resultado table td {
+    border: 1px solid #bbb;
+}
+
+#eventos table thead td {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+#eventos table thead .cabeceras-evento  td {
+    border-top: 1px solid #dd0656a1;
+}
+
+#eventos thead,
+#resultado thead {
+    font-size: 14px;
+    background-color: #ddd;
+    line-height: 32px;
+    font-weight: bold;
+}
+
+#eventos tbody,
+#resultado tbody {
+    font-size: 12px;
+}
+
+#eventos tbody td,
+#resultado tbody td {
+    padding: 4px 8px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+
+#eventos tbody tr:nth-child(even),
+#resultado tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+
+#eventos tbody a:hover,
+#resultado tbody a:hover {
+    color: grey;
+}
+
+.texto-evento {
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.cabeceras-evento td {
+    font-size: 14px;
+    line-height: 24px;
+    padding-left: 5px;
+    text-align: center;
+}
+
+#eventos .cabeceras-evento td:first-child {
+    border-left: 1px solid #bbbbbb;
+}
+#eventos .cabeceras-evento td:last-child {
+    border-right: 1px solid #bbbbbb;
+}
+
+#formulariovisita,
+#formularioreserva {
+    border: 1px solid #bbb;
+}
+
+#formulariovisita h3,
+#formularioreserva h3 {
+    border-bottom: 1px solid #bbb;
+    font-size: 12px;
+    line-height: 32px;
+    background-color: #ddd;
+    padding-left: 10px;
+    font-weight: 500;
+    margin: 0;
+}
+
+#formulariovisita #form-guia,
+#formulariovisita #form-guia-res,
+#formularioreserva form {
+    padding: 10px 10px 15px;
+    background-color: #f9f9f9;
+}
+
+#formularioreserva #form-guia-res {
+    padding-bottom: 15px;
+}
+
+#formularioreserva #form-guia-res .chzn-container .chzn-results {
+    max-height: 100px;
+}
+
+#formulariovisita button.enviarvisita,
+#formularioreserva button.enviarreserva {
+    margin-top: 24px;
+    padding: 7px 8px 9px 8px;
+    display: block;
+    line-height: 14px;
+}
+
+#formulariovisita label,
+#formularioreserva label {
+    margin-bottom: 0;
+}
+
+#formulariovisita input,
+#formulariovisita select,
+#formularioreserva input,
+#formularioreserva select {
+    margin-bottom: 10px;
+}
+
+.view-calendarioreservas #system-message-container.completa {
+    position: fixed;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.view-calendarioreservas #system-message-container .alert {
+    max-width: 640px;
+    width: 80%;
+    margin: 200px auto 0;
+    font-size: 20px;
+}
+
+#formularioreserva {
+    overflow: hidden;
+}
+
+#enviarpago,
+#enviarconfirmacion,
+#cancelar,
+#confirmarasistencia,
+#editarreserva{
+    background-color: transparent;
+    border: none;
+    font-weight: bold;
+    color: darkslategray;
+    cursor: pointer;
+}
+
+#enviarpago:hover,
+#enviarconfirmacion:hover,
+#cancelar:hover,
+#confirmarasistencia:hover,
+#editarreserva:hover{
+    color: grey;
+}
+#resultado tr.asistenciaconfirmada{
+    background-color: #c5ffc4 !important;
+}
+.checkbox-enviarcorreo{
+    margin-top: 25px;
+}
+#jform_mandarcorreo{
+    margin-right: 10px;
+}
+#fechavisitaform{
+    display: none;
+}
+.textarea-observaciones-reserva{
+    width: 100%;
+}
+span.badge-danger{
+    font-size: 100%;
+    font-weight: bold;
+    border-radius: 100%;
+}
+.aforo-negativo{
+    font-weight: bold;
+    color: #c33030;
+}
+.visitas-publicas .table-danger, .visitas-publicas .table-danger>td, .visitas-publicas .table-danger>th {
+    background-color: #ffe9eb;
+    color: #c33030;
+}
+.visitas-publicas td a.pulsamiento {
+    color: #dcba74;
+    cursor: pointer;
+}
+.visitas-publicas td a.pulsamiento:hover {
+    color: #A82727;
+}
+.fondo-visita-img{
+    background-repeat: no-repeat;
+    height: 300px;
+    margin: 0 auto;
+    display: block;
+    background-position: center;
+}
+.fondo-visita-img .titulo-intro{
+    text-align: center;
+    position: relative;
+    top: 200px;
+    height: 100px;
+    background: rgba(178,80,52,0.8);
+    color: white;
+    width: 40%;
+    display: block;
+    margin: auto;
+    padding-top: 40px;
+}
+.btn-secondary.bootstrap-touchspin-up,
+.btn-secondary.bootstrap-touchspin-down{
+    height: 30px;
+    width: 30px;
+    border: 1px solid #bbb;
+    font-size: 35px;
+    font-weight: 100;
+    line-height: 23px;
+    padding: 0;
+    margin: 0;
+    color: #bbb;
+    border-radius: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background: transparent;
+}
+.btn-secondary.bootstrap-touchspin-up:hover,
+.btn-secondary.bootstrap-touchspin-down:hover{
+    background: #A82727;
+    color: #bbb;
+    border: 1px solid #bbb;
+}
+#jform_adultos{
+    border: 1px solid #bbb;
+    text-align: center;
+    font-size: 15px;
+    padding: 0px;
+    font-weight: bold;
+}
+.inputs-reservas{
+    display: inline;
+    float: left;
+    padding-right:40px;
+}
+#enviar-info{
+    margin-top: 30px;
+    color: white;
+}
+
+#eventos .visitas-publicas thead {
+    background-color: transparent;
+}
+.label-adultos {
+    font-size: 14px;
+    line-height: 32px;
+    font-weight: bold;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#enviar-info,
+#enviar-reserva {
+    background-color: #d1a449;
+    border-color: #d1a449;
+    float: left;
+    border-radius: 0;
+    text-transform: uppercase;
+    color: white;
+}
+#enviar-reserva{
+    float: right;
+}
+
+#enviar-info:hover,
+#enviar-reserva:hover {
+    background-color: #ffffff;
+    border-color: #d1a449;
+    color: #d1a449;
+}
+
+#enviar-reserva {
+    margin-top: 15px;
+    margin-right: 15px;
+}
+
+/*Nuevas cosas para el nuevo layout*/
+.fc-widget-content .fc-scroller{
+    height: auto !important;
+    overflow: auto !important;
+}
+#seccion-calendario .fc-next-button,
+#seccion-calendario .fc-prev-button{
+    background: transparent;
+    border: none;
+    color: black;
+}
+.fc-toolbar h2,
+.reservas-calendario *{
+    font-family: 'Raleway' !important;
+}
+.btn-secondary.bootstrap-touchspin-up:hover, .btn-secondary.bootstrap-touchspin-down:hover {
+    background: #d1a449;
+    color: white !important;
+    border: 1px solid #bbb;
+}

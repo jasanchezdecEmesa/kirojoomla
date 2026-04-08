@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<metadata>
+	<layout title="Informe de reservas por provincia" option="View">
+        <message>
+                Ver Informe de reservas por provincia
+        </message>
+	</layout>
+</metadata>

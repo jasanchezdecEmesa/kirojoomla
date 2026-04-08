@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="params">
+        <fieldset name="task_params">
+
+            <field
+				name="cpnbLogDeletePeriod"
+				type="number"
+				label="PLG_TASK_DELETECPNBLOGS_FIELD_DELETECPNBLOGS_LABEL"
+    			description="PLG_TASK_DELETECPNBLOGS_FIELD_DELETECPNBLOGS_DESC"
+				default="90"
+				min="1"
+				filter="int"
+				validate="number"
+			/>
+
+        </fieldset>
+    </fields>
+</form>

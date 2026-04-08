@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="nombre" filter="safehtml" type="text" required="true" message="Rellene el campo nombre" label="COM_ERESERVAS_FORM_LBL_RESERVA_NOMBRE" description="COM_ERESERVAS_FORM_DESC_RESERVA_NOMBRE" hint="COM_ERESERVAS_FORM_LBL_RESERVA_NOMBRE"/>
+    <field name="telefono" filter="safehtml" type="text" label="COM_ERESERVAS_FORM_LBL_RESERVA_TELEFONO" description="COM_ERESERVAS_FORM_DESC_RESERVA_TELEFONO" hint="COM_ERESERVAS_FORM_LBL_RESERVA_TELEFONO"/>
+    <field name="email" validate="email" type="email" required="true" message="Rellene el campo email" label="COM_ERESERVAS_FORM_LBL_RESERVA_EMAIL" description="COM_ERESERVAS_FORM_DESC_RESERVA_EMAIL" hint="COM_ERESERVAS_FORM_LBL_RESERVA_EMAIL"/>
+    <field name="id_visita" type="evisitas" label="COM_ERESERVAS_FORM_LBL_RESERVA_ID_VISITA" description="COM_ERESERVAS_FORM_DESC_RESERVA_ID_VISITA" class="inputbox" input_type="list" table="#__ereservas_visita" key_field="id" value_field="nombre" required="true" message="Rellene el campo Visita" default=""/>
+    <field name="id_idioma" type="foreignkey" label="COM_ERESERVAS_FORM_LBL_RESERVA_ID_IDIOMA" description="COM_ERESERVAS_FORM_DESC_RESERVA_ID_IDIOMA" class="inputbox" input_type="list" table="#__ereservas_idioma" key_field="id" value_field="nombre" default="0"/>
+    <field name="personas" filter="safehtml" type="number" required="true" message="Rellene el campo personas" label="COM_ERESERVAS_FORM_LBL_RESERVA_PERSONAS" description="COM_ERESERVAS_FORM_DESC_RESERVA_PERSONAS" hint="COM_ERESERVAS_FORM_LBL_RESERVA_PERSONAS"/>
+    <field name="tarjeta" filter="safehtml" type="text" label="COM_ERESERVAS_FORM_LBL_RESERVA_TARJETA" description="COM_ERESERVAS_FORM_DESC_RESERVA_TARJETA" hint="COM_ERESERVAS_FORM_LBL_RESERVA_TARJETA"/>
+    <field name="pagado" type="list" label="COM_ERESERVAS_FORM_LBL_RESERVA_PAGADO" description="COM_ERESERVAS_FORM_DESC_RESERVA_PAGADO" hint="COM_ERESERVAS_FORM_LBL_RESERVA_PAGADO">
+      <option value="no">COM_ERESERVAS_RESERVAS_PAGADO_OPTION_NO</option>
+      <option value="online">COM_ERESERVAS_RESERVAS_PAGADO_OPTION_ONLINE</option>
+      <option value="tienda">COM_ERESERVAS_RESERVAS_PAGADO_OPTION_TIENDA</option>
+      <option value="invitacion">COM_ERESERVAS_RESERVAS_PAGADO_OPTION_INVITACION</option>
+    </field>
+    <field name="estado" type="list" label="COM_ERESERVAS_FORM_LBL_RESERVA_ESTADO" description="COM_ERESERVAS_FORM_DESC_RESERVA_ESTADO" hint="COM_ERESERVAS_FORM_LBL_RESERVA_ESTADO">
+      <option value="pendiente">COM_ERESERVAS_RESERVAS_ESTADO_OPTION_PENDIENTE</option>
+      <option value="pendiente-pago">COM_ERESERVAS_RESERVAS_ESTADO_OPTION_PENDIENTE_PAGO</option>
+      <option value="pendiente-conf">COM_ERESERVAS_RESERVAS_ESTADO_OPTION_PENDIENTE_CONF</option>
+      <option value="confirmado">COM_ERESERVAS_RESERVAS_ESTADO_OPTION_CONFIRMADO</option>
+      <option value="cancelado">COM_ERESERVAS_RESERVAS_ESTADO_OPTION_CANCELADO</option>
+    </field>
+    <field name="id_usuario" type="foreignkey" label="COM_ERESERVAS_FORM_LBL_RESERVA_ID_USUARIO" description="COM_ERESERVAS_FORM_DESC_RESERVA_ID_USUARIO" class="inputbox" input_type="list" table="#__users" key_field="id" value_field="name" default="0"/>
+    <field name="id_pais" type="foreignkey" label="COM_ERESERVAS_FORM_LBL_RESERVA_ID_PAIS" description="COM_ERESERVAS_FORM_DESC_RESERVA_ID_PAIS" class="inputbox" input_type="list" table="#__ereservas_pais" key_field="id" value_field="nombre" default="0"/>
+    <field name="cpostal" filter="safehtml" type="text" label="COM_ERESERVAS_FORM_LBL_RESERVA_CPOSTAL" description="COM_ERESERVAS_FORM_DESC_RESERVA_CPOSTAL" hint="COM_ERESERVAS_FORM_LBL_RESERVA_CPOSTAL"/>
+    <field name="observaciones" filter="safehtml" type="textarea" label="COM_ERESERVAS_FORM_LBL_RESERVA_OBSERVACIONES" description="COM_ERESERVAS_FORM_DESC_RESERVA_OBSERVACIONES" hint="COM_ERESERVAS_FORM_LBL_RESERVA_OBSERVACIONES"/>
+    <field name="id_tipo_cliente" type="foreignkey" label="COM_ERESERVAS_FORM_LBL_RESERVA_ID_TIPO_CLIENTE" description="COM_ERESERVAS_FORM_DESC_RESERVA_ID_TIPO_CLIENTE" class="inputbox" input_type="list" table="#__ereservas_tipo_cliente" key_field="id" value_field="nombre" default="0"/>
+    <field name="referencia" filter="safehtml" type="text" label="COM_ERESERVAS_FORM_LBL_RESERVA_REFERENCIA" description="COM_ERESERVAS_FORM_DESC_RESERVA_REFERENCIA" hint="COM_ERESERVAS_FORM_LBL_RESERVA_REFERENCIA"/>
+    <field name="vinos" filter="safehtml" type="text" label="COM_ERESERVAS_FORM_LBL_RESERVA_VINOS" description="COM_ERESERVAS_FORM_DESC_RESERVA_VINOS" hint="COM_ERESERVAS_FORM_LBL_RESERVA_VINOS"/>
+    <field name="tipo_cata" filter="safehtml" type="text" label="COM_ERESERVAS_FORM_LBL_RESERVA_TIPO_CATA" description="COM_ERESERVAS_FORM_DESC_RESERVA_TIPO_CATA" hint="COM_ERESERVAS_FORM_LBL_RESERVA_TIPO_CATA"/>
+    <field name="aperitivo" filter="safehtml" type="text" label="COM_ERESERVAS_FORM_LBL_RESERVA_APERITIVO" description="COM_ERESERVAS_FORM_DESC_RESERVA_APERITIVO" hint="COM_ERESERVAS_FORM_LBL_RESERVA_APERITIVO"/>
+    <field name="alergenos" filter="safehtml" type="text" label="COM_ERESERVAS_FORM_LBL_RESERVA_ALERGENOS" description="COM_ERESERVAS_FORM_DESC_RESERVA_ALERGENOS" hint="COM_ERESERVAS_FORM_LBL_RESERVA_ALERGENOS"/>
+    <field name="menu_especial" filter="safehtml" type="text" label="COM_ERESERVAS_FORM_LBL_RESERVA_MENU_ESPECIAL" description="COM_ERESERVAS_FORM_DESC_RESERVA_MENU_ESPECIAL" hint="COM_ERESERVAS_FORM_LBL_RESERVA_MENU_ESPECIAL"/>
+    <field name="token" filter="safehtml" type="text" label="COM_ERESERVAS_FORM_LBL_RESERVA_TOKEN" description="COM_ERESERVAS_FORM_DESC_RESERVA_TOKEN" hint="COM_ERESERVAS_FORM_LBL_RESERVA_TOKEN"/>
+    <field name="fecha_creacion" class="inputbox" format="%Y-%m-%d" timeformat="24" filter="server_utc" translateformat="false" showtime="false" singleheader="false" todaybutton="false" weeknumbers="false" filltable="false" type="calendar" label="COM_ERESERVAS_FORM_LBL_RESERVA_FECHA_CREACION" description="COM_ERESERVAS_FORM_DESC_RESERVA_FECHA_CREACION" hint="COM_ERESERVAS_FORM_LBL_RESERVA_FECHA_CREACION"/>
+    <field name="fecha_modificacion" class="inputbox" format="%Y-%m-%d" timeformat="24" filter="server_utc" translateformat="false" showtime="false" singleheader="false" todaybutton="false" weeknumbers="false" filltable="false" type="calendar" label="COM_ERESERVAS_FORM_LBL_RESERVA_FECHA_MODIFICACION" description="COM_ERESERVAS_FORM_DESC_RESERVA_FECHA_MODIFICACION" hint="COM_ERESERVAS_FORM_LBL_RESERVA_FECHA_MODIFICACION"/>
+    <field name="asistencia" type="list" label="COM_ERESERVAS_FORM_LBL_RESERVA_ASISTENCIA" description="COM_ERESERVAS_FORM_DESC_RESERVA_ASISTENCIA" hint="COM_ERESERVAS_FORM_LBL_RESERVA_ASISTENCIA">
+      <option value="si">COM_ERESERVAS_RESERVAS_ASISTENCIA_OPTION_SI</option>
+      <option value="no">COM_ERESERVAS_RESERVAS_ASISTENCIA_OPTION_NO</option>
+    </field>
+    <field name="precio" label="COM_ERESERVAS_FORM_LBL_RESERVA_PRECIO" description="COM_ERESERVAS_FORM_DESC_RESERVA_PRECIO" hint="COM_ERESERVAS_FORM_LBL_RESERVA_PRECIO"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

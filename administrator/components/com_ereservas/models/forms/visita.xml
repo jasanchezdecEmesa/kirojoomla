@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+  <fieldset>
+    <field name="id" type="text" readonly="true" class="readonly" default="0" description="JGLOBAL_FIELD_ID_DESC"/>
+    <field name="ordering"/>
+    <field name="state" default="1" type="list" label="JSTATUS" description="JFIELD_PUBLISHED_DESC" class="inputbox" size="1">
+      <option value="1">JPUBLISHED</option>
+      <option value="0">JUNPUBLISHED</option>
+      <option value="2">JARCHIVED</option>
+      <option value="-2">JTRASHED</option>
+    </field>
+    <field name="checked_out" type="hidden" filter="unset"/>
+    <field name="checked_out_time" default="0000-00-00 00:00:00" type="hidden" filter="unset"/>
+    <field name="created_by" type="createdby" default="0" label="COM_ERESERVAS_FORM_LBL_VISITA_CREATED_BY" description="COM_ERESERVAS_FORM_DESC_VISITA_CREATED_BY" hidden="true" hint="COM_ERESERVAS_FORM_LBL_VISITA_CREATED_BY"/>
+    <field name="modified_by" type="modifiedby" default="0" label="COM_ERESERVAS_FORM_LBL_VISITA_MODIFIED_BY" description="COM_ERESERVAS_FORM_DESC_VISITA_MODIFIED_BY" hidden="true" hint="COM_ERESERVAS_FORM_LBL_VISITA_MODIFIED_BY"/>
+    <field name="nombre" filter="safehtml" type="text" label="COM_ERESERVAS_FORM_LBL_VISITA_NOMBRE" description="COM_ERESERVAS_FORM_DESC_VISITA_NOMBRE" hint="COM_ERESERVAS_FORM_LBL_VISITA_NOMBRE"/>
+    <field name="id_sala" type="foreignkey" label="COM_ERESERVAS_FORM_LBL_VISITA_ID_SALA" description="COM_ERESERVAS_FORM_DESC_VISITA_ID_SALA" class="inputbox" input_type="list" table="#__ereservas_sala" key_field="id" value_field="nombre" multiple="multiple" default="0"/>
+    <field name="aforo_web" filter="safehtml" type="number" required="true" label="COM_ERESERVAS_FORM_LBL_VISITA_AFORO_WEB" description="COM_ERESERVAS_FORM_DESC_VISITA_AFORO_WEB" hint="COM_ERESERVAS_FORM_LBL_VISITA_AFORO_WEB"/>
+    <field name="aforo_privado" filter="safehtml" type="number" label="COM_ERESERVAS_FORM_LBL_VISITA_AFORO_PRIVADO" description="COM_ERESERVAS_FORM_DESC_VISITA_AFORO_PRIVADO" hint="COM_ERESERVAS_FORM_LBL_VISITA_AFORO_PRIVADO"/>
+    <field name="comida" type="list" required="true" message="Rellene el campo comida" label="COM_ERESERVAS_FORM_LBL_VISITA_COMIDA" description="COM_ERESERVAS_FORM_DESC_VISITA_COMIDA" hint="COM_ERESERVAS_FORM_LBL_VISITA_COMIDA">
+      <option value="si">COM_ERESERVAS_VISITAS_COMIDA_OPTION_SI</option>
+      <option value="no">COM_ERESERVAS_VISITAS_COMIDA_OPTION_NO</option>
+    </field>
+    <field name="cata" type="list" required="true" message="Rellene el campo Cata" label="COM_ERESERVAS_FORM_LBL_VISITA_CATA" description="COM_ERESERVAS_FORM_DESC_VISITA_CATA" hint="COM_ERESERVAS_FORM_LBL_VISITA_CATA">
+      <option value="si">COM_ERESERVAS_VISITAS_CATA_OPTION_SI</option>
+      <option value="no">COM_ERESERVAS_VISITAS_CATA_OPTION_NO</option>
+    </field>
+    <field name="observaciones" filter="safehtml" type="textarea" label="COM_ERESERVAS_FORM_LBL_VISITA_OBSERVACIONES" description="COM_ERESERVAS_FORM_DESC_VISITA_OBSERVACIONES" hint="COM_ERESERVAS_FORM_LBL_VISITA_OBSERVACIONES"/>
+    <field name="precio" label="COM_ERESERVAS_FORM_LBL_VISITA_PRECIO" description="COM_ERESERVAS_FORM_DESC_VISITA_PRECIO" hint="COM_ERESERVAS_FORM_LBL_VISITA_PRECIO"/>
+    <field name="fecha" class="inputbox" format="%Y-%m-%d" timeformat="24" filter="server_utc" translateformat="false" showtime="false" singleheader="false" todaybutton="true" weeknumbers="false" filltable="false" type="calendar" required="true" message="Rellene el campo fecha" label="COM_ERESERVAS_FORM_LBL_VISITA_FECHA" description="COM_ERESERVAS_FORM_DESC_VISITA_FECHA" hint="COM_ERESERVAS_FORM_LBL_VISITA_FECHA"/>
+    <field name="hora_inicio" default="00:00:00" required="true" message="Rellene el campo hora inicio" label="COM_ERESERVAS_FORM_LBL_VISITA_HORA_INICIO" description="COM_ERESERVAS_FORM_DESC_VISITA_HORA_INICIO" hint="COM_ERESERVAS_FORM_LBL_VISITA_HORA_INICIO"/>
+    <field name="hora_fin" default="00:00:00" required="true" message="Rellene el campo Hora Fin" label="COM_ERESERVAS_FORM_LBL_VISITA_HORA_FIN" description="COM_ERESERVAS_FORM_DESC_VISITA_HORA_FIN" hint="COM_ERESERVAS_FORM_LBL_VISITA_HORA_FIN"/>
+    <field name="idioma" type="foreignkey" label="COM_ERESERVAS_FORM_LBL_VISITA_IDIOMA" description="COM_ERESERVAS_FORM_DESC_VISITA_IDIOMA" class="inputbox" input_type="list" table="#__ereservas_idioma" key_field="id" value_field="nombre" default="0"/>
+    <field name="id_tipo_visita" type="foreignkey" label="COM_ERESERVAS_FORM_LBL_VISITA_ID_TIPO_VISITA" description="COM_ERESERVAS_FORM_DESC_VISITA_ID_TIPO_VISITA" class="inputbox" input_type="list" table="#__ereservas_tipo_visita" key_field="id" value_field="nombre" default="0"/>
+    <field name="aforo_ocupado" label="COM_ERESERVAS_FORM_LBL_VISITA_AFORO_OCUPADO" description="COM_ERESERVAS_FORM_DESC_VISITA_AFORO_OCUPADO" hint="COM_ERESERVAS_FORM_LBL_VISITA_AFORO_OCUPADO"/>
+    <field name="guia" type="foreignkey" label="COM_ERESERVAS_FORM_LBL_VISITA_GUIA" description="COM_ERESERVAS_FORM_DESC_VISITA_GUIA" class="inputbox" input_type="list" table="#__ereservas_guias" key_field="id" value_field="nombre" default="0"/>
+    <field name="version_note" type="text" label="JGLOBAL_FIELD_VERSION_NOTE_LABEL" description="JGLOBAL_FIELD_VERSION_NOTE_DESC" class="inputbox" size="45" labelclass="control-label"/>
+  </fieldset>
+</form>

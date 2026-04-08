@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.8" client="site" method="upgrade">
+	<name>Modulo Calendario</name>
+	<creationDate>08/06/2023</creationDate>
+	<author>Emesa Software</author>
+	<authorEmail>webmaster@emesa.com</authorEmail>
+	<authorUrl>emesasoftware.es</authorUrl>
+	<copyright>[COPYRIGHT]</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<version>1.0</version>
+	<description>Modulo para el calendario de Kiro</description>
+
+	<files>
+		<filename module="mod_calendario">mod_calendario.php</filename>
+		<folder>tmpl</folder>
+		<folder>language</folder>
+		<filename>mod_calendario.xml</filename>
+	</files>
+</extension>

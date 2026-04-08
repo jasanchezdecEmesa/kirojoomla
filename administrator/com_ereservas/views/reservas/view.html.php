@@ -1,0 +1,190 @@
+<?php
+
+/**
+ * @version    CVS: 1.0.0
+ * @package    Com_Ereservas
+ * @author     Equipos Mecanizados,S.L. <rsainz@emesa.com>
+ * @copyright  2019 Equipos Mecanizados,S.L.
+ * @license    Licencia Pública General GNU versión 2 o posterior. Consulte LICENSE.txt
+ */
+// No direct access
+defined('_JEXEC') or die;
+
+jimport('joomla.application.component.view');
+
+use \Joomla\CMS\Language\Text;
+
+/**
+ * View class for a list of Ereservas.
+ *
+ * @since  1.6
+ */
+class EreservasViewReservas extends \Joomla\CMS\MVC\View\HtmlView
+{
+	protected $items;
+
+	protected $pagination;
+
+	protected $state;
+
+	/**
+	 * Display the view
+	 *
+	 * @param   string  $tpl  Template name
+	 *
+	 * @return void
+	 *
+	 * @throws Exception
+	 */
+	public function display($tpl = null)
+	{
+		$this->state = $this->get('State');
+		$this->items = $this->get('Items');
+		$this->pagination = $this->get('Pagination');
+        $this->filterForm = $this->get('FilterForm');
+        $this->activeFilters = $this->get('ActiveFilters');
+
+		// Check for errors.
+		if (count($errors = $this->get('Errors')))
+		{
+			throw new Exception(implode("\n", $errors));
+		}
+
+		EreservasHelper::addSubmenu('reservas');
+
+		$this->addToolbar();
+
+		$this->sidebar = JHtmlSidebar::render();
+		parent::display($tpl);
+	}
+
+	/**
+	 * Add the page title and toolbar.
+	 *
+	 * @return void
+	 *
+	 * @since    1.6
+	 */
+	protected function addToolbar()
+	{
+		$state = $this->get('State');
+		$canDo = EreservasHelper::getActions();
+
+		JToolBarHelper::title(Text::_('COM_ERESERVAS_TITLE_RESERVAS'), 'reservas.png');
+
+		// Check if the form exists before showing the add/edit buttons
+		$formPath = JPATH_COMPONENT_ADMINISTRATOR . '/views/reserva';
+
+		if (file_exists($formPath))
+		{
+			if ($canDo->get('core.create'))
+			{
+				JToolBarHelper::addNew('reserva.add', 'JTOOLBAR_NEW');
+
+				if (isset($this->items[0]))
+				{
+					JToolbarHelper::custom('reservas.duplicate', 'copy.png', 'copy_f2.png', 'JTOOLBAR_DUPLICATE', true);
+				}
+			}
+
+			if ($canDo->get('core.edit') && isset($this->items[0]))
+			{
+				JToolBarHelper::editList('reserva.edit', 'JTOOLBAR_EDIT');
+			}
+		}
+
+		if ($canDo->get('core.edit.state'))
+		{
+			if (isset($this->items[0]->state))
+			{
+				JToolBarHelper::divider();
+				JToolBarHelper::custom('reservas.publish', 'publish.png', 'publish_f2.png', 'JTOOLBAR_PUBLISH', true);
+				JToolBarHelper::custom('reservas.unpublish', 'unpublish.png', 'unpublish_f2.png', 'JTOOLBAR_UNPUBLISH', true);
+			}
+			elseif (isset($this->items[0]))
+			{
+				// If this component does not use state then show a direct delete button as we can not trash
+				JToolBarHelper::deleteList('', 'reservas.delete', 'JTOOLBAR_DELETE');
+			}
+
+			if (isset($this->items[0]->state))
+			{
+				JToolBarHelper::divider();
+				JToolBarHelper::archiveList('reservas.archive', 'JTOOLBAR_ARCHIVE');
+			}
+
+			if (isset($this->items[0]->checked_out))
+			{
+				JToolBarHelper::custom('reservas.checkin', 'checkin.png', 'checkin_f2.png', 'JTOOLBAR_CHECKIN', true);
+			}
+		}
+
+		// Show trash and delete for components that uses the state field
+		if (isset($this->items[0]->state))
+		{
+			if ($state->get('filter.state') == -2 && $canDo->get('core.delete'))
+			{
+				JToolBarHelper::deleteList('', 'reservas.delete', 'JTOOLBAR_EMPTY_TRASH');
+				JToolBarHelper::divider();
+			}
+			elseif ($canDo->get('core.edit.state'))
+			{
+				JToolBarHelper::trash('reservas.trash', 'JTOOLBAR_TRASH');
+				JToolBarHelper::divider();
+			}
+		}
+
+		if ($canDo->get('core.admin'))
+		{
+			JToolBarHelper::preferences('com_ereservas');
+		}
+
+		// Set sidebar action - New in 3.0
+		JHtmlSidebar::setAction('index.php?option=com_ereservas&view=reservas');
+	}
+
+	/**
+	 * Method to order fields 
+	 *
+	 * @return void 
+	 */
+	protected function getSortFields()
+	{
+		return array(
+			'a.`id`' => JText::_('JGRID_HEADING_ID'),
+			'a.`ordering`' => JText::_('JGRID_HEADING_ORDERING'),
+			'a.`state`' => JText::_('JSTATUS'),
+			'a.`nombre`' => JText::_('COM_ERESERVAS_RESERVAS_NOMBRE'),
+			'a.`telefono`' => JText::_('COM_ERESERVAS_RESERVAS_TELEFONO'),
+			'a.`email`' => JText::_('COM_ERESERVAS_RESERVAS_EMAIL'),
+			'a.`id_visita`' => JText::_('COM_ERESERVAS_RESERVAS_ID_VISITA'),
+			'a.`id_idioma`' => JText::_('COM_ERESERVAS_RESERVAS_ID_IDIOMA'),
+			'a.`tarjeta`' => JText::_('COM_ERESERVAS_RESERVAS_TARJETA'),
+			'a.`pagado`' => JText::_('COM_ERESERVAS_RESERVAS_PAGADO'),
+			'a.`estado`' => JText::_('COM_ERESERVAS_RESERVAS_ESTADO'),
+			'a.`id_usuario`' => JText::_('COM_ERESERVAS_RESERVAS_ID_USUARIO'),
+			'a.`id_pais`' => JText::_('COM_ERESERVAS_RESERVAS_ID_PAIS'),
+			'a.`cpostal`' => JText::_('COM_ERESERVAS_RESERVAS_CPOSTAL'),
+			'a.`observaciones`' => JText::_('COM_ERESERVAS_RESERVAS_OBSERVACIONES'),
+			'a.`id_tipo_cliente`' => JText::_('COM_ERESERVAS_RESERVAS_ID_TIPO_CLIENTE'),
+			'a.`referencia`' => JText::_('COM_ERESERVAS_RESERVAS_REFERENCIA'),
+			'a.`vinos`' => JText::_('COM_ERESERVAS_RESERVAS_VINOS'),
+			'a.`tipo_cata`' => JText::_('COM_ERESERVAS_RESERVAS_TIPO_CATA'),
+			'a.`aperitivo`' => JText::_('COM_ERESERVAS_RESERVAS_APERITIVO'),
+			'a.`alergenos`' => JText::_('COM_ERESERVAS_RESERVAS_ALERGENOS'),
+			'a.`menu_especial`' => JText::_('COM_ERESERVAS_RESERVAS_MENU_ESPECIAL'),
+		);
+	}
+
+    /**
+     * Check if state is set
+     *
+     * @param   mixed  $state  State
+     *
+     * @return bool
+     */
+    public function getState($state)
+    {
+        return isset($this->state->{$state}) ? $this->state->{$state} : false;
+    }
+}

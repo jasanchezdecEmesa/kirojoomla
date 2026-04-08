@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" hint="COM_ERESERVAS_SEARCH_FILTER_SUBMIT"
+               label="COM_USERS_FILTER_SEARCH_DESC"
+               class="js-stools-search-string" />
+
+        <field name="id_visita" type="sql" label="COM_ERESERVAS_FORM_LBL_RESERVA_ID_VISITA" query="SELECT '' AS `id`,
+'COM_ERESERVAS_RESERVAS_ID_VISITA_FILTER' AS `val`
+UNION SELECT `a`.`id` AS `id`,
+CONCAT(`a`.`id`, ' - ',`b`.`nombre`, ' - ', SUBSTRING(`a`.`fecha`,1,10), ' - ', SUBSTRING(`a`.`hora_inicio`,1,5)) AS val
+FROM `#__ereservas_visita` as `a`
+LEFT JOIN `#__ereservas_tipo_visita` as `b` ON (a.id_tipo_visita = b.id)" key_field="id" value_field="val" class="inputbox" onchange="this.form.submit()" translate="true"/>
+<field name="id_idioma" type="sql" label="COM_ERESERVAS_FORM_LBL_RESERVA_ID_IDIOMA" query="SELECT '' AS `id`, 'COM_ERESERVAS_RESERVAS_ID_IDIOMA_FILTER' AS `val` UNION SELECT `id` AS `id`, `nombre` AS val FROM `#__ereservas_idioma`" key_field="id" value_field="val" class="inputbox" onchange="this.form.submit()" translate="true"/>
+<field name="id_usuario" type="sql" label="COM_ERESERVAS_FORM_LBL_RESERVA_ID_USUARIO" query="SELECT '' AS `id`, 'COM_ERESERVAS_RESERVAS_ID_USUARIO_FILTER' AS `val` UNION SELECT `id` AS `id`, `name` AS val FROM `#__users`" key_field="id" value_field="val" class="inputbox" onchange="this.form.submit()" translate="true"/>
+<field name="id_pais" type="sql" label="COM_ERESERVAS_FORM_LBL_RESERVA_ID_PAIS" query="SELECT '' AS `id`, 'COM_ERESERVAS_RESERVAS_ID_PAIS_FILTER' AS `val` UNION SELECT `id` AS `id`, `nombre` AS val FROM `#__ereservas_pais`" key_field="id" value_field="val" class="inputbox" onchange="this.form.submit()" translate="true"/>
+<field name="id_tipo_cliente" type="sql" label="COM_ERESERVAS_FORM_LBL_RESERVA_ID_TIPO_CLIENTE" query="SELECT '' AS `id`, 'COM_ERESERVAS_RESERVAS_ID_TIPO_CLIENTE_FILTER' AS `val` UNION SELECT `id` AS `id`, `nombre` AS val FROM `#__ereservas_tipo_cliente`" key_field="id" value_field="val" class="inputbox" onchange="this.form.submit()" translate="true"/>
+
+
+    </fields>
+</form>
