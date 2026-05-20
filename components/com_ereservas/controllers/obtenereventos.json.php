@@ -384,28 +384,34 @@ class EreservasControllerObtenerEventos extends EreservasController
         $id_reserva= JFactory::getApplication()->input->get('reservaid',null,'int');
         $id_visita= JFactory::getApplication()->input->get('visitaid',null,'int');
 
-
         $db10= JFactory::getDbo();
         $query = $db10->getQuery(true);
-        $campos = array($db10->quoteName('estado') . ' = ' . $db10->quote('cancelado'),
-                        $db10->quoteName('state'). ' = ' . $db10->quote(0));
-        $condiciones = array($db10->quoteName('id') . ' = ' . $db10->quote($id_reserva),
-                            $db10->quoteName('id_visita') . ' = ' . $db10->quote($id_visita));
+        $campos = array(
+            $db10->quoteName('estado') . ' = ' . $db10->quote('cancelado'),
+            $db10->quoteName('state'). ' = ' . $db10->quote(0)
+        );
+        $condiciones = array(
+            $db10->quoteName('id') . ' = ' . $db10->quote($id_reserva),
+            $db10->quoteName('id_visita') . ' = ' . $db10->quote($id_visita)
+        );
         $query->update($db10->quoteName('#__ereservas_reserva'))->set($campos)->where($condiciones);
         $db10->setQuery($query);
 
         $results = $db10->execute();
 
         EreservasRecalculo::recalcularaforo($id_visita);
-
-
         EreservasUtiles::obtenerPlazas($id_visita);
 
         if($results) {
             EreservasCorreos::enviarMail($id_reserva,'cancelacion');
         }
 
-        return $results;
+        echo new JResponseJson(array(
+            'success' => true,
+            'mensaje' => 'Cancelación completada ejecutando lista de espera'
+        ));
+
+        jexit();
     }
 
     /**
