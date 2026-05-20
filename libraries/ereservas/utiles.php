@@ -130,9 +130,9 @@ class EreservasUtiles
 
         if(count($results) >= 0){
             foreach ($results as $clienteEspera) {
-            $clienteEspera['fecha_liberada'] = $fecha;
-            EreservasCorreos::correoListaEspera($clienteEspera);
-        }
+                $clienteEspera['fecha_liberada'] = $fecha;
+                EreservasCorreos::correoListaEspera($clienteEspera);
+            }
         }
 
 

@@ -84,7 +84,7 @@ class JConfig
 	public $replyto = '';
 	public $replytoname = '';
 	public $robots = '';
-	public $secret = 'XVLWX8GCosUuX5exZvqGkowLAIYYrbmX';
+	public $secret = 'Epbf4mpQb9TrjZSbb8zt0jIfpvVO6DiD';
 	public $sef = '1';
 	public $sef_rewrite = '1';
 	public $sef_suffix = '0';

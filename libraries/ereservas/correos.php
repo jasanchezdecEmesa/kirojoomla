@@ -33,12 +33,6 @@ class EreservasCorreos
 
         $datos['fecha'] = new JDate($datos['fecha']);
 
-        /*if (empty($datos['fecha']) || $datos['fecha'] === '0000-00-00 00:00:00' || $datos['fecha'] === '0000-00-00') {
-            $datos['fecha'] = null;
-        } else {
-            $datos['fecha'] = new JDate($datos['fecha']);
-        }*/
-
         $plantilla = EreservasCorreos::cargarPlantilla($tipo,$datos);
 
         $mailer->addRecipient($datos['email']);
@@ -567,13 +561,11 @@ class EreservasCorreos
 
         $mailer->setSubject($mensaje['titulo']);
 
-        $fechaMostrar = !empty($datos['fecha_liberada']) ? $datos['fecha_liberada'] : $datos['fecha'];
-
         $mensaje['mensaje']  = '<div>';
         $mensaje['mensaje'].= '<p>Le escribimos este mail para comunicarle que ha quedado plazas libres en su dia:</p>';
         $mensaje['mensaje'].= '<ul style="padding: 5px 10px;">';
         $mensaje['mensaje'] .= '<li><strong>Nº Plazas: </strong>'.$datos['plazas'].'</li>';
-        $mensaje['mensaje'] .= '<li><strong>Fecha: </strong>'. JHtml::_('date', $fechaMostrar, DATE_FORMAT_LC3) .'</li>';
+        $mensaje['mensaje'] .= '<li><strong>Fecha: </strong>'. JHtml::_('date', $datos['fecha'], DATE_FORMAT_LC3) .'</li>';
         $mensaje['mensaje'].= '</ul>';
         $mensaje['mensaje'].= '<p>Para realizar la reserva pulse <a href="https://kirosushi.es/reservas">aquí</a>. Tenga en cuenta que la lista de espera es amplia y puede que otra persona haya realizado la reserva si tarda en realizar la suya </p>';
         $mensaje['mensaje'] .= '</div>';
