@@ -553,37 +553,42 @@ class EreservasCorreos
     }
 
     public static function correoListaEspera($datos){
+
+        $email = isset($datos['email']) ? trim($datos['email']) : '';
+        if (empty($email) || !JMailHelper::isEmailAddress($email)) {
+            return false;
+        }
+
         $mensaje = array();
         $mensaje['titulo'] = 'Se han liberado plazas para su dia en kirosushi.es:';
 
         $mailer = JFactory::getMailer();
         $config = JFactory::getConfig();
         $sender = array(
-            $config->get( 'mailfrom' ),
-            $config->get( 'fromname' )
+            $config->get('mailfrom'),
+            $config->get('fromname')
         );
-        $mailer->setSender($sender);
-        $mailer->addRecipient($datos['email']);
 
+        $mailer->setSender($sender);
+        $mailer->addRecipient($email);
         $mailer->setSubject($mensaje['titulo']);
 
-        $fechaMostrar = !empty($datos['fecha_liberada']) ? $datos['fecha_liberada'] : $datos['fecha'];
-
         $mensaje['mensaje']  = '<div>';
-        $mensaje['mensaje'].= '<p>Le escribimos este mail para comunicarle que ha quedado plazas libres en su dia:</p>';
-        $mensaje['mensaje'].= '<ul style="padding: 5px 10px;">';
+        $mensaje['mensaje'] .= '<p>Le escribimos este mail para comunicarle que han quedado plazas libres en su día:</p>';
+        $mensaje['mensaje'] .= '<ul style="padding: 5px 10px;">';
         $mensaje['mensaje'] .= '<li><strong>Nº Plazas: </strong>'.$datos['plazas'].'</li>';
-        $mensaje['mensaje'] .= '<li><strong>Fecha: </strong>'. JHtml::_('date', $fechaMostrar, DATE_FORMAT_LC3) .'</li>';
-        $mensaje['mensaje'].= '</ul>';
-        $mensaje['mensaje'].= '<p>Para realizar la reserva pulse <a href="https://kirosushi.es/reservas">aquí</a>. Tenga en cuenta que la lista de espera es amplia y puede que otra persona haya realizado la reserva si tarda en realizar la suya </p>';
+        $mensaje['mensaje'] .= '<li><strong>Fecha: </strong>'
+            . JHtml::_('date', $datos['fecha_liberada'], JText::_('DATE_FORMAT_LC3'))
+            . '</li>';
+        $mensaje['mensaje'] .= '</ul>';
+        $mensaje['mensaje'] .= '<p>Para realizar la reserva pulse <a href="https://kirosushi.es/reservas">aquí</a>. Tenga en cuenta que la lista de espera es amplia y puede que otra persona haya realizado la reserva si tarda en realizar la suya.</p>';
         $mensaje['mensaje'] .= '</div>';
 
         $plantilla = EreservasCorreos::plantillaComun($mensaje);
 
-        $body = $plantilla;
         $mailer->isHtml(true);
         $mailer->Encoding = 'base64';
-        $mailer->setBody($body);
+        $mailer->setBody($plantilla);
 
         $send = $mailer->Send();
 

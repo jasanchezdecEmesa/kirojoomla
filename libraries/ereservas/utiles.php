@@ -123,19 +123,17 @@ class EreservasUtiles
 
         $query->where($condicionFecha);
         $query->where($db->quoteName('plazas').' <= '.$db->quote($plazas));
+        //$query->where($db->quoteName('state').' = '.$db->quote("1"));
 
         $db->setQuery($query);
         $results = $db->loadAssocList();
 
-
-        if(count($results) >= 0){
+        if(count($results) > 0){
             foreach ($results as $clienteEspera) {
-            $clienteEspera['fecha_liberada'] = $fecha;
-            EreservasCorreos::correoListaEspera($clienteEspera);
+                $clienteEspera['fecha_liberada'] = $fecha;
+                EreservasCorreos::correoListaEspera($clienteEspera);
+            }
         }
-        }
-
-
     }
 }
 
